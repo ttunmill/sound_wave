@@ -16,7 +16,7 @@
     font-size: 1.5rem !important;
     font-weight: 700;
 }
-.main_swiper .main-pagination {bottom: -5% !important;}
+.main_swiper .swiper-pagination {bottom: -10% !important;}
 .main-pagination .swiper-pagination-bullet {
     width: 8px; 
     height: 8px;
@@ -29,7 +29,7 @@
     background: #0a5e5a; 
     border: 1px solid transparent; 
 }
-
+/* ======== sec02 */
 .sec02_swiper .swiper-slide img {width: 100%;}
 .sec02_swiper .swiper-button-prev {left: 5%;}
 .sec02_swiper .swiper-button-next {right: 5% !important;}
@@ -56,3 +56,59 @@
 .sec02_swiper .swiper-button-next:hover:after {
     color: #fff;
 }
+/* ======== sec04 */
+.sec04_swiper .swiper-slide img {width: 100%;}
+.sec04_swiper .swiper-button-prev {left: 5%;}
+.sec04_swiper .swiper-button-next {right: 5% !important;}
+.sec04_swiper .swiper-button-prev,
+.sec04_swiper .swiper-button-next {
+    background-color: #fff;
+    border: 1px solid #0a5e5a;
+    border-radius: 50%;
+    padding: 2rem;
+    color: #0a5e5a !important;
+    transition: all 0.3s;
+}
+.sec04_swiper .swiper-button-prev:after,
+.sec04_swiper .swiper-button-next:after {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.sec04_swiper .swiper-button-prev:hover,
+.sec04_swiper .swiper-button-next:hover  {
+    background-color: #0a5e5a;
+}
+.sec04_swiper .swiper-button-prev:hover:after,
+.sec04_swiper .swiper-button-next:hover:after {
+    color: #fff;
+}
+.sec04_swiper .swiper-pagination {bottom: 15% !important;}
+/* sec05 */
+.sec05_swiper .swiper-slide img {width: 100%;}
+.sec05_swiper .swiper-button-prev {left: 5%;}
+.sec05_swiper .swiper-button-next {right: 5% !important;}
+.sec05_swiper .swiper-button-prev,
+.sec05_swiper .swiper-button-next {
+    background-color: #fff;
+    border: 1px solid #0a5e5a;
+    border-radius: 50%;
+    padding: 2rem;
+    color: #0a5e5a !important;
+    transition: all 0.3s;
+}
+.sec05_swiper .swiper-button-prev:after,
+.sec05_swiper .swiper-button-next:after {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.sec05_swiper .swiper-button-prev:hover,
+.sec05_swiper .swiper-button-next:hover  {
+    background-color: #0a5e5a;
+}
+.sec05_swiper .swiper-button-prev:hover:after,
+.sec05_swiper .swiper-button-next:hover:after {
+    color: #fff;
+}
+.sec05_swiper .swiper-pagination {bottom: 15% !important;}
