@@ -33,7 +33,7 @@ const swiper3 = new Swiper(".sec04_swiper", {
     slidesPerView: 2,
     pagination: {
         el: '.sec04_swiper .swiper-pagination',
-        clickable: true,
+        // clickable: true,
         // type: 'fraction',
     },
     navigation: {
@@ -44,15 +44,15 @@ const swiper3 = new Swiper(".sec04_swiper", {
 
 const swiper4 = new Swiper(".sec05_swiper", {
     autoplay : false,
-    loop : true,
+    // loop : true,
     slidesPerView: 1,
     pagination: {
-        el: '.sec04_swiper .swiper-pagination',
+        el: '.sec05_swiper .swiper-pagination',
         clickable: true,
         // type: 'fraction',
     },
     navigation: {
-        // nextEl:".swiper-button-next", 
-        // prevEl:".swiper-button-prev"
+        nextEl:".swiper-button-next", 
+        prevEl:".swiper-button-prev"
     },
 })
