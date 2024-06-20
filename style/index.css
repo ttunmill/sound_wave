@@ -38,6 +38,7 @@ section > h2 {
 /* ======== 상단 이메일 띠 */
 nav {
     min-width: 1480px;
+    width: 100%;
     background-color: #fff;
     z-index: 999;
 }
