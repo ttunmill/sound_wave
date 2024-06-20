@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/swiper_design.css">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/modal.css">
     <link rel="shortcut icon" href="./images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
     <!-- js -->
     <script src="./js/jquery-3.7.1.min.js" defer></script>
@@ -804,7 +805,7 @@
                 <h2>NOTICE</h2>
                 <a href="#"></a>
             </div>
-            <div class="swiper-container sec04_swiper">
+            <div class="swiper_container sec04_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1">
                         <a href="#">
@@ -896,8 +897,10 @@
                 <div class="swiper-button-next"></div>
             </div>
             <div class="sec05_video">
-                <button type="button">close</button>
-                <iframe width="1300" height="731" src="https://www.youtube.com/embed/lVy628znc80" title="[ARTIST MESSAGE] LE SSERAFIM 3rd Mini Album &#39;EASY&#39; Special Store @SOUNDWAVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video_wrap">
+                    <button type="button">close</button>
+                    <iframe width="1300" height="731" src="https://www.youtube.com/embed/lVy628znc80" title="[ARTIST MESSAGE] LE SSERAFIM 3rd Mini Album &#39;EASY&#39; Special Store @SOUNDWAVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
     </main>
@@ -968,6 +971,80 @@
                 <span>COPYRIGHT, <em>SOUNDWAVE CORP.</em> ALL RIGHTS RESERVED.</span>
                 <span>호스팅서비스 제공자 카페24</span>
             </p>
+        </div>
+    </div>
+    <div class="cart_area">
+        <div class="modal_header">
+            <h2>옵션 선택</h2>
+            <button type="button"></button>
+        </div>
+        <div class="modal_body">
+            <h3 class="product_name">123123</h3>
+            <form action="" method="post">
+                <p class="image"><img src="" alt=""></p>
+                <table class="top_tbl">
+                    <tr>
+                        <th>개인정보 수집 및 이용 동의</th>
+                        <th>
+                            <select class="ProductOption0" required="true">
+                                <option value="">[필수] 옵션을 선택해 주세요 -</option>
+                                <option value="">-------------------</option>
+                                <option value="101">동의합니다</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>배송일정 내용 동의</td>
+                        <td>
+                            <select class="ProductOption0"required="true">
+                                <option value="">- [필수] 옵션을 선택해 주세요 -</option>
+                                <option value="">-------------------</option>
+                                <option value="105">공지에 기재된 일정에 맞춰서 순차 발송</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>취소 및 환불 불가 동의</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">- [필수] 옵션을 선택해 주세요 -</option>
+                                <option value="">-------------------</option>
+                                <option value="">동의합니다</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>미성년자 법정 대리인 동의</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">- [필수] 옵션을 선택해 주세요 -</option>
+                                <option value="">-------------------</option>
+                                <option value="">성인입니다</option>
+                                <option value="">법정 대리인의 동의를 받았습니다</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <div class="btm_tbl">
+                    <div>
+                        <h3 class="product_name"></h3>
+                        <p class="select_result"></p>
+                    </div>
+                    <div class="quantity">
+                        <input type="text" class="quantity_opt" value="1"><a href="#" class="up"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="option_box_up" alt="수량증가"></a><a href="#none" class="down eProductQuantityDownClass" data-target="option_box1_down"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="option_box_down" alt="수량감소"></a></span>
+                    </div>
+                    <div>
+                        <p class="product_price"></p>
+                    </div>
+                </table>
+                <div>
+                    <p>총 상품금액(수량) : <span class="product_price"></span><span class="product_num"></span></p>
+                </div>
+                <div class="finish_btn">
+                    <button type="submit">바로 구매하기</button>
+                    <button type="button">장바구니 담기</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>

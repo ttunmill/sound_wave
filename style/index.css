@@ -449,7 +449,7 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     justify-content: space-between;
 }
 .sec04 .sec04_swiper .swiper-wrapper .swiper-slide {
-    width: calc(100% / 3 - 2rem) !important;
+    width: calc(33.33% - 2rem) !important;
 }
 .sec04 .sec04_swiper .swiper-wrapper .swiper-slide a .img {
     overflow: hidden;
@@ -553,12 +553,18 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
-.sec05_video iframe {transform: scale(0.8);}
+/* .sec05_video iframe {transform: scale(0.8);} */
+.sec05_video .video_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 .sec05_video button {
-    margin-top: 50px;
     background-color: unset;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     border: 0;
+    font-weight: 600;
+    line-height: 1.5;
     color: #fff;
 }
 /* .sec05_video iframe {width: 100%;} */
@@ -680,4 +686,8 @@ footer .ft_list li .return li:last-child a {flex: 1;}
 .footer_btm .footer_bottom_cate p:last-child em {
     color: #ffd6dd;
     font-weight: 500;
+}
+/* sec03 cart 모달 */
+.cart_area {
+    width: 500px;
 }

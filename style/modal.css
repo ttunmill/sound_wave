@@ -1,0 +1,32 @@
+/* sec03 cart 모달 */
+/* 모달 헤더 */
+.cart_area {
+    width: 500px;
+}
+.cart_area .modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+    background-color: #000;
+}
+.cart_area .modal_header button {
+    filter: invert(1);
+    width: 22px;
+    height: 22px;
+    background-color: unset;
+    background-image: url("../images/close.png");
+    background-size: 100%;
+    border: 0;
+}
+/* 모달 바디 */
+.modal_body {
+    padding: 20px;
+}
+.modal_body h3 {
+    padding: 0 5px 20px;
+    font-size: 0.75rem;
+    border-bottom: 1px dotted #000;
+}
