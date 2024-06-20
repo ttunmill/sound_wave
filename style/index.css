@@ -33,7 +33,7 @@ section > h2 {
 /* ======== 상단 이메일 띠 */
 nav {
     position: fixed;
-    width: 100%;
+    min-width: 1480px;
     z-index: 999;
 }
 nav .inquiry_line {
@@ -137,6 +137,28 @@ nav .nav_btm .customer_nav .customer_nav_list > li .btn img {
     display: inline-block;
     opacity: 0.7;
 }
+nav .nav_btm .customer_nav .customer_nav_list .select_down {
+    position: relative;
+}
+nav .nav_btm .customer_nav .customer_nav_list .select_down li {}
+nav .nav_btm .customer_nav .customer_nav_list .select_down li .btn {}
+nav .nav_btm .customer_nav .customer_nav_list .select_down li .btn img {transition: all 0.3s;}
+nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang {
+    position: absolute;
+    top: 25px;
+    width: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 999;
+}
+nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang li {margin-bottom: 10px;}
+nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang li:last-child {margin: 0;}
+nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang li a:hover {color: #0a5e5a;}
 /* sec01 */
 .sec01 {
     /* position: relative; */

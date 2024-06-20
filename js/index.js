@@ -4,10 +4,8 @@ const nav_btm = document.querySelector(".nav_btm")
 const gnb = document.querySelector(".gnb")
 const gnb_a = document.querySelectorAll(".gnb > li > a")
 const sub = document.querySelectorAll(".sub")
-const lang_btn = document.querySelector(".select_lang")
 console.log(nav)
 for(var i of sub) {i.style.display = "none"}
-lang_btn.style.display = "none"
 gnb_a.forEach((i, j) => {
     i.addEventListener("mouseover", () => {
         // for(var i of sub) {i.style.display = "none"}
@@ -17,6 +15,23 @@ gnb_a.forEach((i, j) => {
         console.log("skrka");
         for(var i of sub) {i.style.display = "none"}
     })
+})
+// 언어 버튼
+const lang_list = document.querySelector(".select_lang")
+const lang_btn = document.querySelector(".select_down > li > .btn")
+const lang_btn_img = document.querySelector(".select_down > li > .btn img")
+
+lang_list.style.display = "none"
+let lang_flag = false;
+lang_btn.addEventListener("click", () => {
+    lang_flag = !lang_flag
+    if(lang_flag == true) {
+        lang_list.style.display = "block"
+        lang_btn_img.style.transform = "rotate(180deg)"
+    } else {
+        lang_list.style.display = "none"
+        lang_btn_img.style.transform = "rotate(0)"
+    }
 })
 
 
