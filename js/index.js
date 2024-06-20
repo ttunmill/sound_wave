@@ -17,7 +17,7 @@ gnb_li.forEach((i, j) => {
 const nav = document.querySelector("nav")
 const inquiry_line = document.querySelector(".inquiry_line")
 window.addEventListener("scroll", () => {
-    if(this.window.pageYOffset >= 50) {
+    if(this.window.pageYOffset >= 150) {
         inquiry_line.style.display = "none"
         nav.style.position = "fixed"
     } else {
