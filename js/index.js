@@ -1,21 +1,31 @@
 // 네비게이션
-const nav = document.querySelector("nav")
 const nav_btm = document.querySelector(".nav_btm")
 const gnb = document.querySelector(".gnb")
-const gnb_a = document.querySelectorAll(".gnb > li > a")
+const gnb_li = document.querySelectorAll(".gnb > li")
 const sub = document.querySelectorAll(".sub")
-console.log(nav)
 for(var i of sub) {i.style.display = "none"}
-gnb_a.forEach((i, j) => {
+gnb_li.forEach((i, j) => {
     i.addEventListener("mouseover", () => {
-        // for(var i of sub) {i.style.display = "none"}
         sub[j].style.display = "block"
     })
     gnb.addEventListener("mouseout", () => {
-        console.log("skrka");
         for(var i of sub) {i.style.display = "none"}
     })
 })
+
+// 네비게이션 스크롤시 고정
+const nav = document.querySelector("nav")
+const inquiry_line = document.querySelector(".inquiry_line")
+window.addEventListener("scroll", () => {
+    if(this.window.pageYOffset >= 50) {
+        inquiry_line.style.display = "none"
+        nav.style.position = "fixed"
+    } else {
+        inquiry_line.style.display = "block"
+        nav.style.position = "relative"
+    }
+})
+
 // 언어 버튼
 const lang_list = document.querySelector(".select_lang")
 const lang_btn = document.querySelector(".select_down > li > .btn")
@@ -34,6 +44,23 @@ lang_btn.addEventListener("click", () => {
     }
 })
 
+// 검색 버튼
+const search_a = document.querySelector(".search_a")
+const search_form = document.querySelector("#searchBarForm")
+
+let search_flag = false;
+let search_img = search_a.children[0].src
+search_a.addEventListener("click", (e) => {
+    search_flag = !search_flag
+    e.preventDefault();
+    if(search_flag == true) {
+        search_form.style.opacity = "1"
+        search_a.children[0].src = "../images/close.png" 
+    } else {
+        search_form.style.opacity = "0"
+        search_a.children[0].src = "../images/search_ico.png" 
+    }
+})
 
 // sec03 이벤트 버튼
 const sec03_btn = document.querySelectorAll(".event_btn a")
@@ -64,6 +91,22 @@ img_g.forEach((i, j) => {
     text = sec03_tit[j].innerText
     hover_txt[j].innerText = text
 })
+
+// sec05 비디오 버튼
+const video_img = document.querySelectorAll(".video_img")
+const sec05_video = document.querySelector(".sec05_video")
+
+let video_flag = false;
+sec05_video.style.display = "none"
+for(var i = 0; i < video_img.length; i++) {
+    video_img[i].addEventListener("click", (e) => {
+        e.preventDefault();
+        sec05_video.style.display = "flex"
+    }) 
+    sec05_video.children[0].addEventListener("click", () => {
+        sec05_video.style.display = "none"
+    })
+}
 
 // footer bottom 버튼
 const ft_btn = document.querySelector(".footer_btm h3")

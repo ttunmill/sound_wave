@@ -105,13 +105,24 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#"><img src="./images/search_ico.png" alt="검색"></a></li>
+                        <li>
+                            <a href="#" class="search_a"><img src="./images/search_ico.png" alt="검색"></a>
+                            <form id="searchBarForm" name="" method="get">
+                                <h2>SEARCH</h2>
+                                <div class="search_bar_line">
+                                    <input type="text" id="search_bar" name="search_bar">
+                                    <button type="submit"></button>
+                                </div>
+                                <p>인기검색어</p>
+                                </fieldset>
+                            </form>
+                        </li>
                         <li><a href="#"><img src="./images/cart_ico.png" alt="장바구니"></a></li>
                         <li><a href="#"><img src="./images/user_ico.png" alt="내 정보"></a></li>
                     </ul>
                 </div>
-                <div class="deco_underline"></div>
             </div>
+            <div class="deco_underline"></div>
         </nav>
     </header>
     <main>
@@ -175,8 +186,8 @@
                                 <span>14,100원</span>
                                 <span>16,500원</span>
                             </div>
+                            <p class="special"><img src="./images/custom_1017089254727986.png" alt=""></p>
                         </a>
-                        <p class="special"><img src="./images/custom_1017089254727986.png" alt=""></p>
                     </div>
                     <div class="swiper-slide slide3">
                         <a href="#">
@@ -836,7 +847,7 @@
             <div class="swiper-container sec05_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1">
-                        <a href="#">
+                        <a href="#" class="video_img">
                             <p class="img"><img src="./images/main_video_1.jpg" alt=""></p>
                         </a>
                         <a href="#">
@@ -849,12 +860,12 @@
                         </a>
                     </div>
                     <div class="swiper-slide slide2">
-                        <a href="#">
+                        <a href="#" class="video_img">
                             <p class="img"><img src="./images/main_video_2.jpg" alt=""></p>
                         </a>
                     </div>
                     <div class="swiper-slide slide3">
-                        <a href="#">
+                        <a href="#" class="video_img">
                             <p class="img"><img src="./images/main_video_3.jpg" alt=""></p>
                         </a>
                         <a href="#">
@@ -867,7 +878,7 @@
                         </a>
                     </div>
                     <div class="swiper-slide slide4">
-                        <a href="#">
+                        <a href="#" class="video_img">
                             <p class="img"><img src="./images/main_video_4.jpg" alt=""></p>
                         </a>
                         <a href="#">
@@ -882,6 +893,10 @@
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
+            <div class="sec05_video">
+                <button type="button">close</button>
+                <iframe width="1300" height="731" src="https://www.youtube.com/embed/lVy628znc80" title="[ARTIST MESSAGE] LE SSERAFIM 3rd Mini Album &#39;EASY&#39; Special Store @SOUNDWAVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
     </main>

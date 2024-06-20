@@ -14,7 +14,7 @@ const swiper1 = new Swiper(".main_swiper", {
 
 const swiper2 = new Swiper(".sec02_swiper", {
     autoplay : false,
-    loop : true,
+    // loop : true,
     slidesPerView: 3,
     pagination: {
         el: '.sec02_swiper .swiper-pagination',
