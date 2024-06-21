@@ -5,14 +5,15 @@
     font-weight: normal;
     font-style: normal;
 }
-body {min-width: 1480px;}
-/* main {padding-top: 120px;} */
+body {
+    min-width: 320px;
+}
 section:not(:first-child) {
-    padding: 100px 210px;
+    padding: 50px 16px;
 }
 section > h2 {
     color: #0a5e5a;
-    font-size: 40px;
+    font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 70px;
     text-align: center;
@@ -37,7 +38,6 @@ section > h2 {
 .non_sub {display: none !important;}
 /* ======== 상단 이메일 띠 */
 nav {
-    min-width: 1480px;
     width: 100%;
     background-color: #fff;
     z-index: 999;
@@ -49,36 +49,73 @@ nav .inquiry_line {
     line-height: 40px;
 }
 nav .inquiry_line a {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #fff;
 }
 /* ======== 네비게이션 */
+/* 네비게이션 미드 */
+nav .nav_mid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+}
+nav .nav_mid .menu_btn {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+nav .nav_mid .menu_btn span {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #0a5e5a;
+    display: inline-block;
+}
+nav .nav_mid .menu_btn span:nth-child(2) {
+    right: 0;
+}
+nav .nav_mid .menu_btn span:nth-child(3) {
+    bottom: 0;
+}
+nav .nav_mid .menu_btn span:nth-child(4) {
+    right: 0;
+    bottom: 0;
+}
+nav .nav_mid .nav_mid_right {
+    display: flex;
+    gap: 1rem;
+}
+/* 네비게이션 바텀 */
 nav .nav_btm {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    margin: 0 50px;
+    padding: 10px 16px;
     background-color: #fff;
 }
 nav .nav_btm .gnb {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 nav .nav_btm .gnb > li {
     position: relative;
-    margin-right: 50px;
+    margin-right: 10px;
 }
 nav .nav_btm .gnb > li:last-child {margin: 0}
 nav .nav_btm .gnb > li > a {
     display: block;
-    line-height: 50px;
+    /* line-height: 50px; */
     font-weight: 500;
     transition: all 0.3s;
+    font-size: 0.813rem;
 } 
 nav .nav_btm .gnb > li > a:hover {
     color: #0a5e5a;
@@ -171,12 +208,13 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
 .search_a img {}
 #searchBarForm {
     position: absolute;
-    top: 36px;
-    right: 0;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #0a5e5a;
     box-sizing: border-box;
     padding: 30px 25px;
-    width: 400px;
+    width: 90%;
     border-radius: 10px;
     z-index: 800;
     opacity: 0;
@@ -268,7 +306,7 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     -webkit-box-orient: vertical;
     line-height: 1.5;
     text-align: center;
-    font-size: 0.938rem;
+    font-size: 0.875rem;
     font-weight: 400;
     color: #1e1e1e;
     height: 70px;
@@ -285,28 +323,29 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
 .sec02_swiper .swiper-slide a .price span:first-child {
     color: #0a5e5a;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .sec02_swiper .swiper-slide a .price span:last-child {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     color: #aaa;
     text-decoration: line-through;
 }
 /* sec03 */
 .sec03 {
     margin: 0 auto;
-    /* width: 1440px; */
+    padding: 0 16px;
 }
 .event_tit {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
 }
 .event_tit h2 {
     width: 100%;
     color: #0a5e5a;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
-    margin-bottom: 70px;
     text-align: center;
 }
 .event_tit a {
@@ -314,8 +353,8 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     transition: all 0.3s;
 }
 .event_tit a:hover {
@@ -325,8 +364,8 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     content: "";
     display: block;
     position: absolute;
-    width: 3px;
-    height: 30px;
+    width: 2px;
+    height: 15px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -336,8 +375,8 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     content: "";
     display: block;
     position: absolute;
-    width: 3px;
-    height: 30px;
+    width: 2px;
+    height: 15px;
     transform: rotate(90deg);
     background-color: #aaa;
 }
@@ -349,7 +388,7 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
 }
 .sec03 .event_btn a {
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 0.938rem;
     color: #9b9b9b;
     font-weight: 500;
 }
@@ -357,10 +396,10 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 .sec03 .all_list li {
-    width: calc(100% / 4 - 2rem);
+    width: calc(100% / 2 - 1rem);
 }
 .sec03 .all_list li .sec03_g .img_g {
     display: block;

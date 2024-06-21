@@ -4,14 +4,6 @@ const gnb = document.querySelector(".gnb")
 const gnb_li = document.querySelectorAll(".gnb > li")
 const sub = document.querySelectorAll(".sub")
 for(var i of sub) {i.style.display = "none"}
-gnb_li.forEach((i, j) => {
-    i.addEventListener("mouseover", () => {
-        sub[j].style.display = "block"
-    })
-    gnb.addEventListener("mouseout", () => {
-        for(var i of sub) {i.style.display = "none"}
-    })
-})
 
 // 네비게이션 스크롤시 고정
 const nav = document.querySelector("nav")
@@ -27,22 +19,22 @@ window.addEventListener("scroll", () => {
 })
 
 // 언어 버튼
-const lang_list = document.querySelector(".select_lang")
-const lang_btn = document.querySelector(".select_down > li > .btn")
-const lang_btn_img = document.querySelector(".select_down > li > .btn img")
+// const lang_list = document.querySelector(".select_lang")
+// const lang_btn = document.querySelector(".select_down > li > .btn")
+// const lang_btn_img = document.querySelector(".select_down > li > .btn img")
 
-lang_list.style.display = "none"
-let lang_flag = false;
-lang_btn.addEventListener("click", () => {
-    lang_flag = !lang_flag
-    if(lang_flag == true) {
-        lang_list.style.display = "block"
-        lang_btn_img.style.transform = "rotate(180deg)"
-    } else {
-        lang_list.style.display = "none"
-        lang_btn_img.style.transform = "rotate(0)"
-    }
-})
+// lang_list.style.display = "none"
+// let lang_flag = false;
+// lang_btn.addEventListener("click", () => {
+//     lang_flag = !lang_flag
+//     if(lang_flag == true) {
+//         lang_list.style.display = "block"
+//         lang_btn_img.style.transform = "rotate(180deg)"
+//     } else {
+//         lang_list.style.display = "none"
+//         lang_btn_img.style.transform = "rotate(0)"
+//     }
+// })
 
 // 검색 버튼
 const search_a = document.querySelector(".search_a")
@@ -82,15 +74,15 @@ sec03_btn.forEach((i, j) => {
 })
 
 // sec03 img 호버시 이벤트
-const hover_txt = document.querySelectorAll(".hover_txt")
-const sec03_tit = document.querySelectorAll(".sec03_g h3")
-const img_g = document.querySelectorAll(".img_g")
+// const hover_txt = document.querySelectorAll(".hover_txt")
+// const sec03_tit = document.querySelectorAll(".sec03_g h3")
+// const img_g = document.querySelectorAll(".img_g")
 
-let text = ""
-img_g.forEach((i, j) => {
-    text = sec03_tit[j].innerText
-    hover_txt[j].innerText = text
-})
+// let text = ""
+// img_g.forEach((i, j) => {
+//     text = sec03_tit[j].innerText
+//     hover_txt[j].innerText = text
+// })
 
 // sec05 비디오 버튼
 const video_img = document.querySelectorAll(".video_img")
