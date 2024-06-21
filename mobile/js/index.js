@@ -26,54 +26,49 @@ const nav_clone_con = document.querySelector(".nav_clone_content")
 const nav_clone_gnb = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li > a")
 const nav_clone_gnb_child = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li > a span")
 const nav_clone_sub = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li .sub")
-console.log(nav_clone_area.firstElementChild)
 
 nav_clone.lastElementChild.style.display = "none"
 nav_clone_area.style.opacity = 0;
 nav_clone_area.style.width = 0;
 nav_clone_area.style.height = 0;
 for(var i of nav_clone_sub) {i.style.display = "block"}
-nav_clone.style.transform = "translateX(-100%)"
+nav_clone.style.transform = "translateX(-100%)" 
 
 menu_btn.addEventListener("click", (e) => {
     e.preventDefault();
     nav_clone_area.style.opacity = 1;
     nav_clone_area.style.width = "100%";
-nav_clone_area.style.height = "100%";
+    nav_clone_area.style.height = "100%";
     nav_clone.style.transform = "translateX(0)"
+    document.body.style.overflow = 'hidden'; /* 뒤 배경 스크롤 막기 */
+    
 })
 
 nav_clone_area.firstElementChild.addEventListener("click" , (e) => {
     e.preventDefault();
     nav_clone_area.style.opacity = 0
     nav_clone_area.style.width = 0;
-nav_clone_area.style.height = 0;
+    nav_clone_area.style.height = 0;
     nav_clone.style.transform = "translateX(-100%)"
+    document.body.style.overflow = 'auto'; /* 뒤 배경 스크롤 다시 가능함 */
 })
 
-// nav_clone_gnb.forEach((i, j) => {
-//     i.addEventListener("click", (e) => {
-//         e.preventDefault();
-//         nav_clone_sub[j].classList.toggle("on")
-//     })
-// })
-
-let nav_flag = false;
 nav_clone_gnb.forEach((i, j) => {
-    i.addEventListener("click", (e) => {
+    i.addEventListener('click', (e) => {
         e.preventDefault();
-        for(var p of nav_clone_gnb_child) {p.style.transform = "rotate(0)"}
-        nav_clone_gnb_child[j].style.transform = "rotate(45deg)"
-        for(var k of nav_clone_sub) {k.style.height = "0"}
-        nav_clone_sub[j].style.height = "max-content"
 
-        if(nav_clone_sub[j].style.height > 0) {
-            for(var k of nav_clone_sub) {k.style.height = "0"}
+        // 클릭된 아코디언의 서브 메뉴 상태를 토글
+        nav_clone_sub[j].classList.toggle('on');
+
+        // 다른 아코디언들은 닫히도록 처리
+        for (let k = 0; k < nav_clone_sub.length; k++) {
+            if (k !== j) {
+                nav_clone_sub[k].classList.remove('on');
+            }
         }
-    })
-})
+    });
+});
 
-// nav_clone.style.display = "none"
 //언어 버튼
 const lang_list = document.querySelector(".nav_clone_area .select_lang")
 const lang_btn = document.querySelector(".nav_clone_area .select_down > .btn")
@@ -98,14 +93,17 @@ const search_a = document.querySelector(".search_a")
 const search_form = document.querySelector("#searchBarForm")
 
 let search_flag = false;
+search_form.style.visibility  = "hidden"
 let search_img = search_a.children[0].src
 search_a.addEventListener("click", (e) => {
     search_flag = !search_flag
     e.preventDefault();
     if(search_flag == true) {
+        search_form.style.visibility = "visible"
         search_form.style.opacity = "1"
         search_a.children[0].src = "./images/close.png" 
     } else {
+        search_form.style.visibility  = "hidden"
         search_form.style.opacity = "0"
         search_a.children[0].src = "./images/search_ico.png" 
     }

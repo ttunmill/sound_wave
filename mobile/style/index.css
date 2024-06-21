@@ -302,12 +302,12 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
     box-shadow: none;
     text-align: left;
     overflow: hidden;
-    transition: all 0.3s;
     height: 0;
+    transition: all 0.3s;
 }
 .nav_clone_area nav .nav_btm .gnb > li .sub.on {
     min-height: 20px;
-    height: max-content;
+    height: 100px;
 }
 .nav_clone_area nav .nav_btm .gnb > li .sub li {
     padding: 0 20px;
