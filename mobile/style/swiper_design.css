@@ -1,0 +1,143 @@
+/* ======== main_swiper  */
+.main_swiper {position: relative;}
+/* .swiper-slide {width: 1480px;} */
+.main_swiper .swiper-slide img {width: 100%;}
+.main_swiper .swiper-button-prev {left: 5%;}
+.main_swiper .swiper-button-next {right: 5% !important;}
+.main_swiper .swiper-button-prev,
+.main_swiper .swiper-button-next {
+    background-color: #212121;
+    border-radius: 50%;
+    padding: 2rem;
+    color: #fff !important;
+}
+.main_swiper .swiper-button-prev:after,
+.main_swiper .swiper-button-next:after {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+}
+.main_swiper .swiper-pagination {bottom: -10% !important;}
+.main-pagination .swiper-pagination-bullet {
+    width: 8px; 
+    height: 8px;
+    opacity: 1 !important;
+    background-color: #aaa;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 60px; 
+    border-radius: 5px; 
+    background: #0a5e5a; 
+    border: 1px solid transparent; 
+}
+/* ======== sec02 */
+.sec02_swiper .swiper-slide img {width: 100%;}
+.sec02_swiper .swiper-button-prev {left: 5%;}
+.sec02_swiper .swiper-button-next {right: 5% !important;}
+.sec02_swiper .swiper-button-prev,
+.sec02_swiper .swiper-button-next {
+    background-color: #fff;
+    border: 1px solid #0a5e5a;
+    border-radius: 50%;
+    padding: 2rem;
+    color: #0a5e5a !important;
+    transition: all 0.3s;
+}
+.sec02_swiper .swiper-button-prev:after,
+.sec02_swiper .swiper-button-next:after {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.sec02_swiper .swiper-button-prev:hover,
+.sec02_swiper .swiper-button-next:hover  {
+    background-color: #0a5e5a;
+}
+.sec02_swiper .swiper-button-prev:hover:after,
+.sec02_swiper .swiper-button-next:hover:after {
+    color: #fff;
+}
+/* ======== sec04 */
+.sec04_swiper .swiper-slide img {width: 100%;}
+.sec04_swiper .swiper-button-prev {left: 5%;}
+.sec04_swiper .swiper-button-next {right: 5% !important;}
+.sec04_swiper .swiper-button-prev,
+.sec04_swiper .swiper-button-next {
+    background-color: #fff;
+    border: 1px solid #0a5e5a;
+    border-radius: 50%;
+    padding: 2rem;
+    color: #0a5e5a !important;
+    transition: all 0.3s;
+}
+.sec04_swiper .swiper-button-prev:after,
+.sec04_swiper .swiper-button-next:after {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.sec04_swiper .swiper-button-prev:hover,
+.sec04_swiper .swiper-button-next:hover  {
+    background-color: #0a5e5a;
+}
+.sec04_swiper .swiper-button-prev:hover:after,
+.sec04_swiper .swiper-button-next:hover:after {
+    color: #fff;
+}
+.sec04_swiper .swiper-pagination {bottom: 15% !important;}
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide .img {background-color: #000;}
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide .img img {opacity: 0.5;}
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide h3,
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide .date {
+    display: none;
+}
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide-active .img {background-color: unset;}
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide-active .img img {opacity: 1;}
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide-active h3,
+.sec04 .sec04_swiper .swiper-wrapper .swiper-slide-active .date {
+    display: block;
+}
+/* .sec04-bullet {
+    display: block;
+    width: 8px;
+    height: 8px;
+    opacity: 1 !important;
+    background-color: #aaa;
+} */
+.sec04-bullet-active {
+    margin: 0 auto;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    background: #0a5e5a;
+    border: 1px solid transparent;
+}
+
+/* sec05 */
+.sec05_swiper .swiper-slide img {width: 100%;}
+.sec05_swiper .swiper-button-prev {left: 5%;}
+.sec05_swiper .swiper-button-next {right: 5% !important;}
+.sec05_swiper .swiper-button-prev,
+.sec05_swiper .swiper-button-next {
+    background-color: #fff;
+    border: 1px solid #0a5e5a;
+    border-radius: 50%;
+    padding: 2rem;
+    color: #0a5e5a !important;
+    transition: all 0.3s;
+}
+.sec05_swiper .swiper-button-prev:after,
+.sec05_swiper .swiper-button-next:after {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.sec05_swiper .swiper-button-prev:hover,
+.sec05_swiper .swiper-button-next:hover  {
+    background-color: #0a5e5a;
+}
+.sec05_swiper .swiper-button-prev:hover:after,
+.sec05_swiper .swiper-button-next:hover:after {
+    color: #fff;
+}
+.sec05_swiper .swiper-pagination {bottom: 15% !important;}
