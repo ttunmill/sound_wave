@@ -48,6 +48,7 @@ nav .inquiry_line {
     background-color: #0a5e5a;
     line-height: 40px;
 }
+nav .nav_clone_content {display: none;}
 nav .inquiry_line a {
     font-size: 0.75rem;
     color: #fff;
@@ -116,7 +117,9 @@ nav .nav_btm .gnb > li > a {
     font-weight: 500;
     font-size: 0.813rem;
 } 
+nav .nav_btm .gnb > li > a span {display: none;}
 nav .nav_btm .gnb > li .sub {
+    display: none;
     position: absolute;
     top: 50px;
     left: 50%;
@@ -144,6 +147,170 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
 .deco_underline {
     width: 100%;
     border: 1px solid #d5d5d5;
+}
+/* ======== 클론 네비게이션 */
+.nav_clone_area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+.nav_clone_area .nav_close {
+    position: absolute;
+    right: 25%;
+    top: 5%;
+    filter: invert(1);
+    z-index: 999;
+}
+.nav_clone_area .nav_close a {display: block;}
+.nav_clone_area nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 20px;
+    width: 70%;
+    height: 100%;
+    border-radius: 0 0 100px 0 ;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.nav_clone_area nav .nav_clone_content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 2rem;
+}
+.nav_clone_area .inquiry_line {display: none;}
+.nav_clone_area .nav_mid {display: none;}
+.nav_clone_area .nav_btm {background-color: unset;}
+.nav_clone_area nav .nav_clone_content .nav_clone_list {
+    display: flex;
+    gap: 0.5rem;
+}
+.nav_clone_area nav .nav_clone_content .nav_clone_list li:first-child a,
+.nav_clone_area nav .nav_clone_content .nav_clone_list li:nth-child(2) a {
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 12px;
+    background: #f0f0f0;
+    color: #333;
+    border-radius: 30px;
+    height: 28px;
+    line-height: 28px;
+}
+.nav_clone_area nav .nav_clone_content .nav_clone_list li:last-child a {
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 12px;
+    background: #0a5e5a;
+    color: #fff;
+    border-radius: 30px;
+    height: 28px;
+    line-height: 28px;
+}
+.nav_clone_area nav .nav_btm .gnb {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/* 네비게이션 클론 언어 버튼 */
+.nav_clone_area nav .select_down {
+    position: relative;
+}
+.nav_clone_area nav .select_down .btn button {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #aaa;
+    background-color: unset;
+    border: none;
+}
+.nav_clone_area nav .select_down .btn img {transition: all 0.3s;}
+.nav_clone_area nav .select_down .select_lang {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 20px 10px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 999;
+}
+.nav_clone_area nav .select_down .select_lang li a {
+    display: block;
+    width: 100%;
+    font-size: 0.75rem;
+    color: #666;
+}
+.nav_clone_area nav .select_down .select_lang li {margin-bottom: 10px;}
+.nav_clone_area nav .select_down .select_lang li:last-child {margin: 0;}
+.nav_clone_area nav .nav_btm {padding: 0;}
+.nav_clone_area nav .nav_btm .gnb > li {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: space-between; */
+    width: 100%;
+}
+.nav_clone_area nav .nav_btm .gnb > li > a {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: #222;
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 0;
+    font-weight: 700;
+}
+.nav_clone_area nav .nav_btm .gnb > li > a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 12px;
+    height: 12px;
+}
+.nav_clone_area nav .nav_btm .gnb > li > a span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #5e5e5e;
+
+}
+.nav_clone_area nav .nav_btm .gnb > li > a span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #5e5e5e;
+    transform: rotate(90deg);
+}
+.nav_clone_area nav .nav_btm .gnb > li .sub {
+    position: unset;
+    transform: translate(0);
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 0;
+}
+.nav_clone_area nav .nav_btm .gnb > li .sub.on {
+    min-height: 20px;
+    height: max-content;
+}
+.nav_clone_area nav .nav_btm .gnb > li .sub li {
+    padding: 0 20px;
 }
 /* ======== nav 오른쪽 메뉴 */
 nav .nav_btm .customer_nav {
@@ -175,28 +342,6 @@ nav .nav_btm .customer_nav .customer_nav_list > li .btn img {
     display: inline-block;
     opacity: 0.7;
 }
-nav .nav_btm .customer_nav .customer_nav_list .select_down {
-    position: relative;
-}
-nav .nav_btm .customer_nav .customer_nav_list .select_down li {}
-nav .nav_btm .customer_nav .customer_nav_list .select_down li .btn {}
-nav .nav_btm .customer_nav .customer_nav_list .select_down li .btn img {transition: all 0.3s;}
-nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang {
-    position: absolute;
-    top: 25px;
-    width: 80px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding: 20px 10px;
-    text-align: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    z-index: 999;
-}
-nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang li {margin-bottom: 10px;}
-nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang li:last-child {margin: 0;}
-nav .nav_btm .customer_nav .customer_nav_list .select_down .select_lang li a:hover {color: #0a5e5a;}
 /* 검색 창 */
 nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
 .nav_mid_right li a {
@@ -259,6 +404,7 @@ nav .nav_btm .customer_nav .customer_nav_list > li {position: relative;}
 /* sec01 */
 .sec01 {
     padding-bottom: 100px;
+    overflow: hidden;
 }
 /* sec02 */
 .sec02 {

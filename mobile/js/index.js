@@ -2,8 +2,7 @@
 const nav_btm = document.querySelector(".nav_btm")
 const gnb = document.querySelector(".gnb")
 const gnb_li = document.querySelectorAll(".gnb > li")
-const sub = document.querySelectorAll(".sub")
-for(var i of sub) {i.style.display = "none"}
+const sub = document.querySelectorAll("nav .nav_btm .gnb > li .sub")
 
 // 네비게이션 스크롤시 고정
 const nav = document.querySelector("nav")
@@ -21,27 +20,78 @@ window.addEventListener("scroll", () => {
 // 네비게이션 클론
 const nav_clone = nav.cloneNode(true)
 const nav_clone_area = document.querySelector(".nav_clone_area")
-console.log(nav_clone)
-nav_clone.appendChild(nav_clone_area)
+nav_clone_area.appendChild(nav_clone)
+const menu_btn = document.querySelector(".menu_btn")
+const nav_clone_con = document.querySelector(".nav_clone_content")
+const nav_clone_gnb = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li > a")
+const nav_clone_gnb_child = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li > a span")
+const nav_clone_sub = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li .sub")
+console.log(nav_clone_area.firstElementChild)
 
-//언어 버튼
-// const lang_wrap = document.querySelector("")
-// const lang_list = document.querySelector(".select_lang")
-// const lang_btn = document.querySelector(".select_down > li > .btn")
-// const lang_btn_img = document.querySelector(".select_down > li > .btn img")
+nav_clone.lastElementChild.style.display = "none"
+nav_clone_area.style.opacity = 0;
+nav_clone_area.style.width = 0;
+nav_clone_area.style.height = 0;
+for(var i of nav_clone_sub) {i.style.display = "block"}
+nav_clone.style.transform = "translateX(-100%)"
 
-// lang_list.style.display = "none"
-// let lang_flag = false;
-// lang_btn.addEventListener("click", () => {
-//     lang_flag = !lang_flag
-//     if(lang_flag == true) {
-//         lang_list.style.display = "block"
-//         lang_btn_img.style.transform = "rotate(180deg)"
-//     } else {
-//         lang_list.style.display = "none"
-//         lang_btn_img.style.transform = "rotate(0)"
-//     }
+menu_btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    nav_clone_area.style.opacity = 1;
+    nav_clone_area.style.width = "100%";
+nav_clone_area.style.height = "100%";
+    nav_clone.style.transform = "translateX(0)"
+})
+
+nav_clone_area.firstElementChild.addEventListener("click" , (e) => {
+    e.preventDefault();
+    nav_clone_area.style.opacity = 0
+    nav_clone_area.style.width = 0;
+nav_clone_area.style.height = 0;
+    nav_clone.style.transform = "translateX(-100%)"
+})
+
+// nav_clone_gnb.forEach((i, j) => {
+//     i.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         nav_clone_sub[j].classList.toggle("on")
+//     })
 // })
+
+let nav_flag = false;
+nav_clone_gnb.forEach((i, j) => {
+    i.addEventListener("click", (e) => {
+        e.preventDefault();
+        for(var p of nav_clone_gnb_child) {p.style.transform = "rotate(0)"}
+        nav_clone_gnb_child[j].style.transform = "rotate(45deg)"
+        for(var k of nav_clone_sub) {k.style.height = "0"}
+        nav_clone_sub[j].style.height = "max-content"
+
+        if(nav_clone_sub[j].style.height > 0) {
+            for(var k of nav_clone_sub) {k.style.height = "0"}
+        }
+    })
+})
+
+// nav_clone.style.display = "none"
+//언어 버튼
+const lang_list = document.querySelector(".nav_clone_area .select_lang")
+const lang_btn = document.querySelector(".nav_clone_area .select_down > .btn")
+const lang_btn_img = document.querySelector(".nav_clone_area .select_down > .btn img")
+
+lang_list.style.display = "none"
+
+let lang_flag = false;
+lang_btn.addEventListener("click", () => {
+    lang_flag = !lang_flag
+    if(lang_flag == true) {
+        lang_list.style.display = "block"
+        lang_btn_img.style.transform = "rotate(180deg)"
+    } else {
+        lang_list.style.display = "none"
+        lang_btn_img.style.transform = "rotate(0)"
+    }
+})
 
 // 검색 버튼
 const search_a = document.querySelector(".search_a")
