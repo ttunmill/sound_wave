@@ -47,6 +47,7 @@
 .modal_body h3 {
     padding: 20px;
     font-size: 0.75rem;
+    line-height: 1.3;
     border-bottom: 1px dotted #000;
 }
 .modal_body #user_product_form {
