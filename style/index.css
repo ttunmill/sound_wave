@@ -687,7 +687,3 @@ footer .ft_list li .return li:last-child a {flex: 1;}
     color: #ffd6dd;
     font-weight: 500;
 }
-/* sec03 cart 모달 */
-.cart_area {
-    width: 500px;
-}
