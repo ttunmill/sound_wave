@@ -29,13 +29,14 @@ const swiper2 = new Swiper(".sec02_swiper", {
 
 const swiper3 = new Swiper(".sec04_swiper", {
     autoplay: true,
+    spaceBetween: 20,
     slidesPerView: 1, // 한 번에 보여지는 슬라이드 개수
     //initialSlide: 1, // 초기 시작 슬라이드
     pagination: {
         el: '.sec04_swiper .swiper-pagination',
         type: 'bullets', 
-        bulletClass: 'sec04-bullet', // 사용자 정의 클래스 지정
-        bulletActiveClass: 'sec04-bullet-active', // 활성화된 bullet의 사용자 정의 클래스 지정
+        //bulletClass: 'sec04-bullet', // 사용자 정의 클래스 지정
+        //bulletActiveClass: 'sec04-bullet-active', // 활성화된 bullet의 사용자 정의 클래스 지정
     },
     navigation: {
         nextEl:".swiper-button-next", 
@@ -46,7 +47,7 @@ const swiper3 = new Swiper(".sec04_swiper", {
 
 
 const swiper4 = new Swiper(".sec05_swiper", {
-    autoplay : false,
+    autoplay : true,
     // loop : true,
     slidesPerView: 1,
     pagination: {
@@ -54,8 +55,8 @@ const swiper4 = new Swiper(".sec05_swiper", {
         clickable: true,
         // type: 'fraction',
     },
-    navigation: {
-        nextEl:".swiper-button-next", 
-        prevEl:".swiper-button-prev"
-    },
+    // navigation: {
+    //     nextEl:".swiper-button-next", 
+    //     prevEl:".swiper-button-prev"
+    // },
 })

@@ -2,8 +2,8 @@
 .main_swiper {position: relative;}
 /* .swiper-slide {width: 1480px;} */
 .main_swiper .swiper-slide img {width: 100%;}
-.main_swiper .swiper-button-prev {left: 5%;}
-.main_swiper .swiper-button-next {right: 5% !important;}
+.main_swiper .swiper-button-prev {left: 16px;}
+.main_swiper .swiper-button-next {right: 16px !important;}
 .main_swiper .swiper-button-prev,
 .main_swiper .swiper-button-next {
     background-color: #212121;
@@ -16,7 +16,12 @@
     font-size: 1.5rem !important;
     font-weight: 700;
 }
-.main_swiper .swiper-pagination {bottom: -10% !important;}
+.main_swiper .swiper-pagination {
+    width: 50% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    bottom: -10% !important;
+}
 .main-pagination .swiper-pagination-bullet {
     width: 8px; 
     height: 8px;
@@ -46,26 +51,24 @@
 .sec02_swiper .swiper-button-next:after {
     font-size: 1rem !important;
     font-weight: 700;
-    transition: all 0.3s;
 }
 /* ======== sec04 */
 .sec04_swiper .swiper-slide img {width: 100%;}
-.sec04_swiper .swiper-button-prev {left: 5%;}
-.sec04_swiper .swiper-button-next {right: 5% !important;}
+.sec04_swiper .swiper-button-prev {left: 16px;}
+.sec04_swiper .swiper-button-next {right: 16px !important;}
 .sec04_swiper .swiper-button-prev,
 .sec04_swiper .swiper-button-next {
-    background-color: #fff;
-    border: 1px solid #0a5e5a;
+    width: 36px;
+    height: 36px;
+    background-color: #0a5e5a;
     border-radius: 50%;
-    padding: 2rem;
-    color: #0a5e5a !important;
+    color: #fff !important;
     transition: all 0.3s;
 }
 .sec04_swiper .swiper-button-prev:after,
 .sec04_swiper .swiper-button-next:after {
-    font-size: 1.5rem !important;
+    font-size: 1rem !important;
     font-weight: 700;
-    transition: all 0.3s;
 }
 .sec04_swiper .swiper-button-prev:hover,
 .sec04_swiper .swiper-button-next:hover  {
@@ -133,3 +136,14 @@
     color: #fff;
 }
 .sec05_swiper .swiper-pagination {bottom: 15% !important;}
+/* ======= sec05 높이 조정 */
+/* active 상태면 높이 존재 */
+.sec05 .sec05_swiper .swiper-wrapper .swiper-slide a:not(.video_img) {
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.sec05 .sec05_swiper .swiper-wrapper .swiper-slide-active a:not(.video_img) {
+    max-height: 1000px;
+}

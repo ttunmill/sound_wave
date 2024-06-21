@@ -18,7 +18,14 @@ window.addEventListener("scroll", () => {
     }
 })
 
-// 언어 버튼
+// 네비게이션 클론
+const nav_clone = nav.cloneNode(true)
+const nav_clone_area = document.querySelector(".nav_clone_area")
+console.log(nav_clone)
+nav_clone.appendChild(nav_clone_area)
+
+//언어 버튼
+// const lang_wrap = document.querySelector("")
 // const lang_list = document.querySelector(".select_lang")
 // const lang_btn = document.querySelector(".select_down > li > .btn")
 // const lang_btn_img = document.querySelector(".select_down > li > .btn img")
@@ -111,7 +118,7 @@ ft_btn.addEventListener("click", (e) => {
     e.preventDefault();
     ft_flag = !ft_flag
     if(ft_flag == true) {
-        ft_cate.style.height = "110px"
+        ft_cate.style.height = "236px"
         ft_btn_img.style.transform = "rotate(180deg)"
     } else {
         ft_cate.style.height = "0"
