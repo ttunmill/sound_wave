@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 사운드웨이브</title>
+    <link rel="stylesheet" href="../../style/reset.css">
+    <link rel="stylesheet" href="../style/m-h_ft.css">
+    <link rel="shortcut icon" href="../../images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/login.css">
+    <!-- js -->
+    <script src="../../lib/jquery-3.7.1.min.js" defer></script>
+    <script src="./js/m_page-h.ft.js" defer></script>
+    <script src="./js/login.js" defer></script>
+</head>
+<body>
+    <header>
+        <?
+        include("../header.php");
+        ?>
+    </header>
+    <main>
+        <h1>로그인</h1>
+        <div class="select_login">
+            <a href="#" class="active">회원 로그인</a>
+            <a href="#">비회원 주문조회</a>
+        </div>
+        <form method="post" id="user_login_form">
+            <div class="user_insert">
+                <input type="text" placeholder="아이디" required>
+                <input type="password" placeholder="비밀번호" required>
+                <span>
+                    <img src="./images/login/bg_checkbox.png" alt="">
+                    <input type="checkbox" name="user_chk" id="user_chk">
+                    <label for="user_chk">로그인 상태 유지</label>
+                </span>
+            </div>
+            <div class="user_input">
+                <button type="submit">로그인</button>
+                <div class="user_search_info">
+                    <a href="#">회원가입</a>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+                <a href="https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=jRG1hcdZHhaT9PvHQmY4&scope=login+userinfo&state=ba915c645a7064e0a9f56161051b9a86be716ef29154b4af810e647ef065055ad568f8a79ce1ae48c34dcca15b6b50921f405c648e9447d16aea2558f968a3f900f1dd59ba758f58267cb1138a767b1a3c238277da7de054111eb55279055d96806005cdf0133afa7a844c434679e05741783d33bf31a0fc03222ddc3fd8fca7&redirect_uri=https%3A%2F%2Fsound-wave.co.kr%2FApi%2FMember%2FOauth2ClientCallback%2Fnaver%2F"><img src="./images/login/ico_btn_naver.png" alt="네이버 로그인">네이버 로그인</a>
+                <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fis_popup%3Dfalse%26ka%3Dsdk%252F1.43.5%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fsound-wave.co.kr%26auth_tran_id%3Dk022la693e892b065f7f572bf242e91631fc74b34d8lxslzh3k%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsound-wave.co.kr%252FApi%252FMember%252FOauth2ClientCallback%252Fkakao%252F%26through_account%3Dtrue%26client_id%3D92b065f7f572bf242e91631fc74b34d8&talk_login=hidden#login"><img src="./images/login/ico_btn_kakao.png" alt="카카오 로그인">카카오 로그인</a>
+                <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?response_type=code&client_id=1003383207268-60l7qbvdnvpjkamctniov6phc1f2nrj6.apps.googleusercontent.com&scope=profile%20email&state=3159b42514c4aa62a695e8afea4435a81e7bb9e0411e4ed83ca29932ccd2dcc9ae3d867c923d6cee0ae1bc1bb942454e18eb5664f2dfe13e674d8e1a1dc72132c5a8697419414e0308bfc1e133e510e62d5864bc78c2ceb798a14b9fc6d32640cee3b6f7453f39604e6589d5f90adfda47db21267f34545629ef16cd1b3b9f66&redirect_uri=https%3A%2F%2Fsound-wave.co.kr%2FApi%2FMember%2FOauth2ClientCallback%2Fgoogleplus%2F&service=lso&o2v=1&ddm=0&flowName=GeneralOAuthFlow"><img src="./images/login/ico_google.png" alt="구글 로그인">구글 로그인</a>
+                <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=com.cafe24.ec.soundwavemall.signinwithapple&scope=name+email&state=2049557e24c7ba526fa161643c70c7879caed0c7f406b055ea9e72eeff38ee19a7b966c5b5db026cf98ad4878ef0574ea777108fc976d5af5645bf05dea579d608404d489689ca528d042148e1ac9594662473b5166b9723bd7b75a3cfdc42f63e3e5981b894f429231672ea5dee5fd0728a3742e12cb7da7f2d54aa4ec12b59&response_mode=form_post&redirect_uri=https%3A%2F%2Fsound-wave.co.kr%2FApi%2FMember%2FOauth2ClientCallback%2Fapple%2F"><img src="./images/login/ico_btn_apple.png" alt="애플 로그인">애플 로그인</a>
+            </div>
+        </form>
+        <form action="" method="post" id="non_user_form">
+            <ul class="non_user_list">
+                <li>
+                    <h2>주문자명</h2>
+                    <p><input id="order_name" name="order_name" class="inputTypeText" placeholder="주문자명" type="text"></p>
+                </li>
+                <li>
+                    <h2>주문번호</h2>
+                    <p><input id="order_id" name="order_id" type="text" placeholder="하이픈(-) 포함"></p>
+                </li>
+                <li>
+                    <h2>비회원주문 비밀번호</h2>
+                    <p><input id="order_password" name="order_password" type="password" placeholder="비회원주문 비밀번호"></p>
+                </li>
+            </ul>
+            <button type="submit">조회</button>
+        </form>
+    </main>
+    <div class="footer">
+        <?
+        include("../footer.php");
+        ?>
+    </div>
+</body>
+</html>
