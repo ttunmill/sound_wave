@@ -26,12 +26,17 @@ const nav_clone_con = document.querySelector(".nav_clone_content")
 const nav_clone_gnb = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li > a")
 const nav_clone_gnb_child = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li > a span")
 const nav_clone_sub = document.querySelectorAll(".nav_clone_area nav .nav_btm .gnb > li .sub")
+const nav_close_btn = document.querySelector(".nav_clone_area .nav_close")
 
 nav_clone.lastElementChild.style.display = "none"
 nav_clone_area.style.opacity = 0;
 nav_clone_area.style.width = 0;
 nav_clone_area.style.height = 0;
-for(var i of nav_clone_sub) {i.style.display = "block"}
+for(var i of nav_clone_sub) {
+    i.style.display = "block"
+    i.style.height = '0';
+    i.style.transition = 'height 0.3s ease';
+}
 nav_clone.style.transform = "translateX(-100%)" 
 
 menu_btn.addEventListener("click", (e) => {
@@ -44,7 +49,7 @@ menu_btn.addEventListener("click", (e) => {
     
 })
 
-nav_clone_area.firstElementChild.addEventListener("click" , (e) => {
+nav_close_btn.addEventListener("click" , (e) => {
     e.preventDefault();
     nav_clone_area.style.opacity = 0
     nav_clone_area.style.width = 0;
@@ -53,18 +58,36 @@ nav_clone_area.firstElementChild.addEventListener("click" , (e) => {
     document.body.style.overflow = 'auto'; /* 뒤 배경 스크롤 다시 가능함 */
 })
 
-nav_clone_gnb.forEach((i, j) => {
-    i.addEventListener('click', (e) => {
+nav_clone_gnb.forEach((gnbItem, index) => {
+    gnbItem.addEventListener('click', (e) => {
         e.preventDefault();
 
-        // 클릭된 아코디언의 서브 메뉴 상태를 토글
-        nav_clone_sub[j].classList.toggle('on');
+        let subMenu = nav_clone_sub[index];
+        let isOpen = subMenu.classList.toggle('on');
 
-        // 다른 아코디언들은 닫히도록 처리
-        for (let k = 0; k < nav_clone_sub.length; k++) {
-            if (k !== j) {
-                nav_clone_sub[k].classList.remove('on');
+        // 모든 sub 메뉴 닫기
+        nav_clone_sub.forEach((menu, idx) => {
+            if (idx !== index && menu.classList.contains('on')) {
+                menu.classList.remove('on');
+                menu.style.height = '0';
             }
+        });
+
+        // 모든 rotate 효과 초기화
+        nav_clone_gnb_child.forEach((child, idx) => {
+            if (idx !== index) {
+                child.classList.remove('on');
+            }
+        });
+
+        // 현재 메뉴 아이템에 rotate 효과 적용
+        nav_clone_gnb_child[index].classList.toggle('on');
+
+        // sub 메뉴 열고 닫을 때 높이 계산 및 설정
+        if (isOpen) {
+            subMenu.style.height = subMenu.scrollHeight + 'px'; // 현재 높이로 설정
+        } else {
+            subMenu.style.height = '0'; // 닫을 때 높이 0으로 설정
         }
     });
 });
@@ -127,17 +150,6 @@ sec03_btn.forEach((i, j) => {
         sec03_ul[j].style.display = "flex"
     })
 })
-
-// sec03 img 호버시 이벤트
-// const hover_txt = document.querySelectorAll(".hover_txt")
-// const sec03_tit = document.querySelectorAll(".sec03_g h3")
-// const img_g = document.querySelectorAll(".img_g")
-
-// let text = ""
-// img_g.forEach((i, j) => {
-//     text = sec03_tit[j].innerText
-//     hover_txt[j].innerText = text
-// })
 
 // sec05 비디오 버튼
 const video_img = document.querySelectorAll(".video_img")

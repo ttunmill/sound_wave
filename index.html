@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style/modal.css">
     <link rel="shortcut icon" href="./images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
     <!-- js -->
-    <script src="./js/jquery-3.7.1.min.js" defer></script>
+    <script src="./lib/jquery-3.7.1.min.js" defer></script>
     <script src="./js/index.js" defer></script>
     <script src="./js/common.js" defer></script>
     <script src="./js/modal.js" defer></script>
@@ -27,7 +27,7 @@
         var ua = window.navigator.userAgent.toLowerCase();
         var mobileWindowWidth
         if(/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /windows ce/.test(ua)) {
-            document.location.replace("/mobile/index.html");
+            document.location.replace("./mobile/index.html");
         }
     </script>
 </head>

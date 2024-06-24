@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- css -->
+        <link rel="stylesheet" href="../style/reset.css">
+        <link rel="shortcut icon" href="../images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./style/new.css">
+        <!-- js -->
+        <script src="../lib/jquery-3.7.1.min.js" defer></script>
+        <!-- plug in - css -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- plug in - js -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<script>
+    // PC웹페이지에 적용할부분
+    var ua = window.navigator.userAgent.toLowerCase();
+    var mobileWindowWidth
+    if(/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /windows ce/.test(ua)) {
+        document.location.replace("/mobile/index.html");
+    }
+</script>
+<body>
+    <header></header>
+    <main>
+        <section class="sec01">
+            <div class="title_txt">
+                <h1>NEW</h1>
+                <p>PRE-ORDER</p>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

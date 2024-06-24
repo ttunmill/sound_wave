@@ -43,6 +43,7 @@ nav {
     z-index: 999;
 }
 nav .inquiry_line {
+    padding: 0 16px;
     width: 100%;
     text-align: center;
     background-color: #0a5e5a;
@@ -172,11 +173,7 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
     z-index: 999;
 }
 .nav_clone_area .nav_close {
-    position: absolute;
-    right: 20%;
-    top: 5%;
-    filter: invert(1);
-    z-index: 999;
+    
 }
 .nav_clone_area .nav_close a {display: block;}
 .nav_clone_area nav {
@@ -233,6 +230,9 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
 /* 네비게이션 클론 언어 버튼 */
 .nav_clone_area nav .select_down {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .nav_clone_area nav .select_down .btn button {
     display: inline-block;
@@ -290,6 +290,7 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
     position: relative;
     width: 12px;
     height: 12px;
+    transition: all 0.3s;
 }
 .nav_clone_area nav .nav_btm .gnb > li > a span::after {
     content: "";
@@ -308,6 +309,7 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
     height: 12px;
     background-color: #5e5e5e;
     transform: rotate(90deg);
+    
 }
 .nav_clone_area nav .nav_btm .gnb > li .sub {
     position: unset;
@@ -317,10 +319,13 @@ nav .nav_btm .gnb > li .sub li:last-child {margin: 0;}
     text-align: left;
     overflow: hidden;
     height: 0;
-    transition: all 0.3s;
+    transition: height 0.3s ease;
 }
 .nav_clone_area nav .nav_btm .gnb > li .sub.on {
     height: max-content;
+}
+.nav_clone_area nav .nav_btm .gnb > li > a span.on {
+    transform: rotate(45deg);
 }
 .nav_clone_area nav .nav_btm .gnb > li .sub li {
     padding: 0 20px;
