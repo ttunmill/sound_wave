@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW - PRE-ORDER - 사운드웨이브</title>
         <!-- css -->
-        <link rel="stylesheet" href="../style/reset.css">
-        <link rel="stylesheet" href="../style/h_ft.css">
-        <link rel="shortcut icon" href="../images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../../style/reset.css">
+        <link rel="stylesheet" href="../style/m-h_ft.css">
+        <link rel="shortcut icon" href="../../images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
         <link rel="stylesheet" href="./style/new.css">
-        <link rel="stylesheet" href="../style/modal.css">
         <!-- js -->
-        <script src="../lib/jquery-3.7.1.min.js" defer></script>
-        <script src="../js/h_ft.js" defer></script>
+        <script src="../../lib/jquery-3.7.1.min.js" defer></script>
+        <script src="./js/m_page-h.ft.js" defer></script>
         <script src="./js/new.js" defer></script>
-        <script src="./js/modal.js" defer></script>
         <!-- plug in - css -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -22,14 +20,6 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<script>
-    // PC웹페이지에 적용할부분
-    var ua = window.navigator.userAgent.toLowerCase();
-    var mobileWindowWidth
-    if(/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /windows ce/.test(ua)) {
-        document.location.replace("../mobile/pages/new.html");
-    }
-</script>
 <body>
     <header>
         <?
@@ -46,13 +36,20 @@
                 <div>
                     <p>Total : <span class="total_num">0</span> items</p>
                 </div>
-                <ul class="cate_list">
+                <!-- <ul class="cate_list">
                     <li><a href="#">신상품</a></li>
                     <li><a href="#">낮은 가격</a></li>
                     <li><a href="#">높은 가격</a></li>
                     <li><a href="#">인기 상품</a></li>
                     <li><a href="#">조회수</a></li>
-                </ul>
+                </ul> -->
+                <select id="cate_list" name="cate_list">
+                    <option value="">신상품</option>
+                    <option value="">낮은가격</option>
+                    <option value="">높은가격</option>
+                    <option value="">인기상품</option>
+                    <option value="">조회수</option>
+                </select>
             </div>
             <ul class="all_list">
                 <li>
@@ -292,76 +289,6 @@
         <?
         include("../footer.php");
         ?>
-    </div>
-    <div class="cart_bg">
-        <div class="cart_area">
-            <div class="modal_header">
-                <h2>옵션 선택</h2>
-                <button type="button"></button>
-            </div>
-            <div class="modal_body">
-                <h3 class="product_name"></h3>
-                <form action="" method="post" id="user_product_form">
-                    <div class="top_tbl">
-                        <p class="image"><img src="" alt=""></p>
-                        <ul class="top_list">
-                            <li>
-                                <p>개인정보 수집 및 이용 동의</p>
-                                <select class="ProductOption0" required="true">
-                                    <option value="">- [필수] 옵션을 선택해 주세요 -</option>
-                                    <option value="">-------------------</option>
-                                    <option value="101">동의합니다</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p>배송일정 내용 동의</p>
-                                <select class="ProductOption0"required="true">
-                                    <option value="">- [필수] 옵션을 선택해 주세요 -</option>
-                                    <option value="">-------------------</option>
-                                    <option value="105">공지에 기재된 일정에 맞춰서 순차 발송</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p>취소 및 환불 불가 동의</p>
-                                <select name="" id="">
-                                    <option value="">- [필수] 옵션을 선택해 주세요 -</option>
-                                    <option value="">-------------------</option>
-                                    <option value="">동의합니다</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p>미성년자 법정 대리인 동의</p>
-                                <select name="" id="">
-                                    <option value="">- [필수] 옵션을 선택해 주세요 -</option>
-                                    <option value="">-------------------</option>
-                                    <option value="">성인입니다</option>
-                                    <option value="">법정 대리인의 동의를 받았습니다</option>
-                                </select>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="btm_tbl">
-                        <!-- <div>
-                            <h3 class="product_name"></h3>
-                            <p class="select_result"></p>
-                        </div>
-                        <div class="quantity">
-                            <input type="text" class="quantity_opt" value="1"><a href="#" class="up"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="option_box_up" alt="수량증가"></a><a href="#none" class="down eProductQuantityDownClass" data-target="option_box1_down"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="option_box_down" alt="수량감소"></a></span>
-                        </div>
-                        <div>
-                            <p class="product_price"></p>
-                        </div> -->
-                        <div class="result_price">
-                            <p>총 상품금액(수량) : <span class="product_price">0</span><span class="product_num">(0개)</span></p>
-                        </div>
-                        <div class="finish_btn">
-                            <button type="submit" id="buy_btn">바로 구매하기</button>
-                            <button type="button" id="cart_btn">장바구니 담기</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <footer>
         <ul class="ft_list">
-            <li><img src="./images/footer_logo.png" alt="sound wave"></li>
+            <li><img src="../images/footer_logo.png" alt="sound wave"></li>
             <li>
                 <h2>CUSTOMER CENTER</h2>
                 <h3>02-381-3758</h3>
@@ -17,8 +17,8 @@
                     <a href="#">이용약관</a>
                 </div>
                 <div class="company_sns">
-                    <a href="#"><img src="./images/footer_twit.png" alt="twitter"></a>
-                    <a href="#"><img src="./images/footer_you.png" alt="youtube"></a>
+                    <a href="#"><img src="../images/footer_twit.png" alt="twitter"></a>
+                    <a href="#"><img src="../images/footer_you.png" alt="youtube"></a>
                 </div>
             </li>
             <li>
@@ -34,8 +34,8 @@
                         <p>교환 및 반품을 원하시는 상품은 반드시 반품 주소로 보내주셔야 합니다.</p>
                     </li>
                     <li>
-                        <a href="#"><img src="./images/link_2.png" alt="헌터 패밀리"></a>
-                        <a href="#"><img src="./images/link_1.png" alt="CIRCLE CHART"></a>
+                        <a href="#"><img src="../images/link_2.png" alt="헌터 패밀리"></a>
+                        <a href="#"><img src="../images/link_1.png" alt="CIRCLE CHART"></a>
                     </li>
                 </ul>
             </li>
@@ -45,7 +45,7 @@
         <h3>
             <a href="#">
                 <span>COMPANY INFO</span>
-                <img src="./images/cate.png" alt="더 보기">
+                <img src="../images/cate.png" alt="더 보기">
             </a>
         </h3>
         <div class="footer_bottom_cate">

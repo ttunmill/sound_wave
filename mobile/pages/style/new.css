@@ -1,0 +1,198 @@
+/* ============ 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+body {}
+section {
+    padding: 50px 0;
+}
+/* ============ 메인 */
+.sec01 .title_txt {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+.sec01 .title_txt h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.sec01 .title_txt a {
+    color: #0a5e5a;
+    font-weight: 600;
+}
+.sec01 .products_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+.sec01 .products_info p {
+    font-size: 0.813rem;
+    color: #777;
+}
+.sec01 .products_info p span {
+    font-weight: 700;
+    color: #666;
+}
+
+.sec01 #cate_list {
+    max-width: 100%;
+    height: 29px;
+    margin: 0;
+    padding: 0 20px 0 8px;
+    line-height: 29px;
+    font-size: 13px;
+    color: #333;
+    word-break: break-all;
+    font-weight: inherit;
+    border: 1px solid #d7d5d5;
+    border-radius: 0;
+    background: #fff url(//img.echosting.cafe24.com/skin/mobile/common/ico_select.gif) no-repeat 100% 49%;
+    background-size: auto 40px;
+    -webkit-appearance: none;
+}
+.sec01 #cate_list option {font-size: 0.813rem;}
+.sec01 .event_btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 70px;
+}
+.sec01 .event_btn a {
+    display: inline-block;
+    font-size: 1.25rem;
+    color: #9b9b9b;
+    font-weight: 500;
+}
+.sec01 .all_list {
+    width: 90%;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.sec01 .all_list li {
+    width: calc(100% / 2 - 1rem);
+}
+.sec01 .all_list li .sec01_g .img_g {
+    display: block;
+    position: relative;
+    border-radius: 20px;
+    transition: background-color 0.1s;
+}
+.sec01 .all_list li .sec01_g .img_g img {
+    border-radius: 20px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s;
+    background-color: #000;
+}
+.sec01 .all_list li .sec01_g .img_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.sec01 .all_list li .sec01_g .img_txt .hover_txt {
+    font-size: 0.875rem;
+    color: #fff;
+    white-space: inherit;
+    line-height: 1.3;
+}
+.sec01 .all_list li .sec01_g .img_txt button {
+    background: #ffd6dd;
+    color: #1a1a1a;
+    border-radius: 50px;
+    border: 0;
+    width: 140px;
+    height: 40px;
+    transition: all 0.3s;
+}
+.sec01 .all_list li .sec01_g .img_txt button:hover {font-weight: 700;}
+.sec01 .all_list li .sec01_g h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: 10px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    height: 70px;
+}
+.sec01 .all_list li .sec01_g .price {
+    margin-top: 30px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 1px solid #000;
+}
+.sec01 .all_list li .sec01_g .price span:first-child {
+    color: #0a5e5a;
+    font-weight: 700;
+    font-size: 1.063rem;
+    margin-right: 10px;
+}
+.sec01 .all_list li .sec01_g .price span:last-child {
+    font-size: 0.938rem;
+    color: #aaa;
+    text-decoration: line-through;
+}
+.promotion {
+    display: flex;
+    gap: 0.5rem;
+    padding: 10px 0;
+}
+.promotion p {width: 100%;}
+.promotion p img {width: 17%;}
+/* ============ move_page */
+.move_pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.move_pages ol {
+    display: flex;
+}
+.move_pages ol li {
+    text-align: center;
+}
+.move_pages ol a {
+    display: block;
+    width: 33px;
+    padding: 9px 0;
+    font-size: 0.813rem;
+    font-weight: bold;
+    color: #939393;
+    line-height: 14px;
+    background: #fff;
+}
+.move_pages > a img {
+    display: inline-block;
+    width: 12px;
+    margin: 0 10px;
+}
+.move_pages ol a:hover {
+    background-color: #f0f2f2;
+}
+.move_pages ol li:first-child a {
+    border-bottom: 3px solid #495164;
+    color: #495164;
+}
