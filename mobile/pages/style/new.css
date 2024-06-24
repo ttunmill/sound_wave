@@ -157,11 +157,15 @@ section {
 }
 .promotion {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 10px 0;
+    padding: 15px 0;
 }
-.promotion p {width: 100%;}
-.promotion p img {width: 17%;}
+.promotion img {
+    width: auto;
+    height: 15px;
+}
 /* ============ move_page */
 .move_pages {
     display: flex;
