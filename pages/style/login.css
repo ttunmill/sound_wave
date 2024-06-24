@@ -1,0 +1,168 @@
+main {
+    width: 500px;
+    margin: 100px auto;
+}
+
+main h1 {
+    margin-bottom: 50px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+}
+/* ============ 회원/비회원 선택 */
+.select_login {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 50px;
+    font-size: 1.063rem;
+}
+.select_login a {
+    padding: 10px 0;
+    color: #999;
+}
+.select_login a.active {
+    font-weight: 500;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+/* ============ 아이디/비밀번호란 */
+#user_login_form {}
+#user_login_form .user_insert {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 40px;
+}
+#user_login_form .user_insert input[type = text],
+#user_login_form .user_insert input[type = password] {
+    width: 100%;
+    display: block;
+    padding: 20px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+    color: #8F8F91;
+    outline: unset;
+}
+#user_login_form .user_insert span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.875rem;
+    color: #757575;
+}
+/* ============ 로그인 버튼들 */
+#user_login_form .user_input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+#user_login_form .user_input button[type = submit], 
+#user_login_form .user_input a {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 50px;
+}
+#user_login_form .user_input button[type = submit] {
+    background: #000;
+    border: none;
+    transition: background-color 0.3s;
+}
+#user_login_form .user_input button[type = submit]:hover {background: #333;}
+#user_login_form .user_input a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#user_login_form .user_input a img {
+    position: absolute;
+    width: 40px;
+    left: 25px;
+}
+#user_login_form .user_input a:first-of-type {background-color: #26c826;}
+#user_login_form .user_input a:nth-of-type(2) {
+    background-color: #ffeb00;
+    color: #000;
+}
+#user_login_form .user_input a:nth-of-type(3) {
+    background-color: #fff;
+    border: solid 1px #ddd;
+    color: #000;
+}
+#user_login_form .user_input a:nth-of-type(3) img {
+    width: 48px;
+    left: 12px;
+}
+#user_login_form .user_input a:last-of-type {background-color: #191919;}
+/* ============ 아이디/비밀번호 찾기, 회원가입 */
+#user_login_form .user_search_info {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid #d5d5d5;
+}
+#user_login_form .user_search_info a {
+    display: flex;
+    align-items: center;
+    color: #7e7e7e;
+}
+#user_login_form .user_search_info a::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 80%;
+    background-color: #d5d5d5;
+    margin: 0 1rem;
+}
+#user_login_form .user_search_info a:last-child:after {display: none;}
+/* ============ 비회원 주문조회 */
+#non_user_form {}
+#non_user_form .non_user_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 50px;
+}
+#non_user_form .non_user_list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#non_user_form .non_user_list li h2 {
+    width: 39%;
+    font-size: 0.875rem;
+    color: #404040;
+}
+#non_user_form .non_user_list li p {width: 59%;}
+#non_user_form .non_user_list li p input {
+    width: 100%;
+    height: 45px;
+    line-height: 20px;
+    padding: 2px 4px;
+    border: 1px solid #d5d5d5;
+    color: #353535;
+    font-size: 0.75rem;
+}
+#non_user_form button[type = submit] {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #7e7e7e;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+}
+#non_user_form button[type = submit]:hover {
+    background-color: #333;
+    color: #fff;
+}
