@@ -1,0 +1,198 @@
+/* ============ 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+body {min-width: 1480px;}
+section {
+    padding: 100px 0;
+    padding: 100px 0;
+    width: 1280px;
+    margin: 0 auto;
+}
+/* ============ 메인 */
+.sec01 .title_txt {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.sec01 .title_txt h1 {
+    margin-bottom: 40px;
+    font-size: 2.125rem;
+    font-weight: 700;
+}
+.sec01 .title_txt a {
+    color: #0a5e5a;
+    font-weight: 600;
+}
+.sec01 .products_info {
+    display: flex;
+    justify-content: space-between;
+}
+.sec01 .products_info p {
+    font-size: 0.813rem;
+    color: #777;
+}
+.sec01 .products_info p span {
+    font-weight: 700;
+    color: #666;
+}
+.sec01 .cate_list {
+    margin-bottom: 40px;
+    display: flex;
+}
+.sec01 .cate_list li {
+    display: flex;
+    align-items: center;
+}
+.sec01 .cate_list li a {
+    font-size: 0.813rem;
+    color: #777;
+}
+.sec01 .cate_list li a:hover {color: #000;}
+.sec01 .cate_list li::after {
+    content: "";
+    display: inline-block;
+    margin: 0 1rem;
+    width: 1px;
+    height: 80%;
+    background-color: #777;
+}
+.sec01 .cate_list li:last-child:after {display: none;}
+.sec01 .event_btn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 70px;
+}
+.sec01 .event_btn a {
+    display: inline-block;
+    font-size: 1.25rem;
+    color: #9b9b9b;
+    font-weight: 500;
+}
+.sec01 .all_list {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.sec01 .all_list li {
+    width: calc(100% / 4 - 2rem);
+}
+.sec01 .all_list li .sec01_g .img_g {
+    display: block;
+    position: relative;
+    border-radius: 20px;
+    transition: background-color 0.1s;
+}
+.sec01 .all_list li .sec01_g .img_g img {
+    border-radius: 20px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s;
+    background-color: #000;
+}
+.sec01 .all_list li .sec01_g .img_g:hover {background-color: #000;}
+.sec01 .all_list li .sec01_g .img_g:hover img {opacity: 0.1;}
+.sec01 .all_list li .sec01_g .img_g:hover .img_txt {opacity: 1;}
+.sec01 .all_list li .sec01_g .img_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.sec01 .all_list li .sec01_g .img_txt .hover_txt {
+    font-size: 0.875rem;
+    color: #fff;
+    white-space: inherit;
+    line-height: 1.3;
+}
+.sec01 .all_list li .sec01_g .img_txt button {
+    background: #ffd6dd;
+    color: #1a1a1a;
+    border-radius: 50px;
+    border: 0;
+    width: 140px;
+    height: 40px;
+    transition: all 0.3s;
+}
+.sec01 .all_list li .sec01_g .img_txt button:hover {font-weight: 700;}
+.sec01 .all_list li .sec01_g h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: 10px;
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.5;
+    height: 70px;
+}
+.sec01 .all_list li .sec01_g .price {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+}
+.sec01 .all_list li .sec01_g .price span:first-child {
+    color: #0a5e5a;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-right: 10px;
+}
+.sec01 .all_list li .sec01_g .price span:last-child {
+    font-size: 1.125rem;
+    color: #aaa;
+    text-decoration: line-through;
+}
+.promotion {
+    display: flex;
+    gap: 0.5rem;
+    padding: 10px 0;
+}
+/* ============ move_page */
+.move_pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.move_pages ol {
+    display: flex;
+}
+.move_pages ol li {
+    text-align: center;
+}
+.move_pages ol a {
+    display: block;
+    width: 33px;
+    padding: 9px 0;
+    font-weight: bold;
+    color: #939393;
+    line-height: 14px;
+    background: #fff;
+}
+.move_pages > a img {
+    display: inline-block;
+    width: 12px;
+    margin: 0 10px;
+}
+.move_pages ol a:hover {
+    background-color: #f0f2f2;
+}
+.move_pages ol li:first-child a {
+    border-bottom: 3px solid #495164;
+    color: #495164;
+}
