@@ -19,7 +19,7 @@
         <ul class="nav_clone_list">
             <li><a href="#">회원가입</a></li>
             <li><a href="#">주문조회</a></li>
-            <li><a href="#">로그인</a></li>
+            <li><a href="./login.html">로그인</a></li>
         </ul>
     </div>
     <div class="nav_mid">
@@ -90,7 +90,7 @@
                 <a href="./new.html">CS CENTER<span></span></a>
                 <ul class="sub">
                     <li><a href="./new.html">1:1 문의</a></li>
-                    <li><a href="./new.html">FAQ</a></li>
+                    <li><a href="./login.html">FAQ</a></li>
                 </ul>
             </li>
         </ul>
