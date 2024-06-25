@@ -57,11 +57,11 @@ search_a.addEventListener("click", (e) => {
     if(search_flag == true) {
         search_form.style.visibility = "visible"
         search_form.style.opacity = "1"
-        search_a.children[0].src = "./images/close.png" 
+        search_a.children[0].src = "./images/common/close.png" 
     } else {
         search_form.style.visibility  = "hidden"
         search_form.style.opacity = "0"
-        search_a.children[0].src = "./images/search_ico.png" 
+        search_a.children[0].src = "./images/common/search_ico.png" 
     }
 })
 
