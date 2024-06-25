@@ -1,14 +1,26 @@
 // 상세정보/쇼핑가이드 버튼
-const menu_btn = document.querySelectorAll(".menu_btn a")
-menu_btn.forEach((i, j) => {
-    i.addEventListener("click", (e) => {
-        e.preventDefault();
-    })
+const detail_tap = document.querySelectorAll(".menu_btn a")
+const sec02 = document.querySelector(".sec02")
+const sec03 = document.querySelector(".sec03")
+
+detail_tap[0].addEventListener("click", (e) => {
+    e.preventDefault();
+    sec02.style.display = "block"
+    sec03.style.display = "none"
+    detail_tap[0].classList.add("active")
+    detail_tap[1].classList.remove("active")
+})
+detail_tap[1].addEventListener("click", (e) => {
+    e.preventDefault();
+    sec02.style.display = "none"
+    sec03.style.display = "block"
+    detail_tap[0].classList.remove("active")
+    detail_tap[1].classList.add("active")
 })
 
 
 // 오른쪽 fixed 박스
-const fixed_box = document.querySelector(".fixed_box")
+/* const fixed_box = document.querySelector(".fixed_box")
 const fixed_box_buy = document.querySelector(".fixed_box a")
 
 window.addEventListener("scroll", () => {
@@ -19,7 +31,7 @@ window.addEventListener("scroll", () => {
         fixed_box.style.opacity = 0
         fixed_box.style.visibility = "hidden"
     }
-})
+}) */
 
 // fixed 박스 buy now를 눌렀을 때
 /* const popup_wrap = document.querySelector(".popup_wrap")
@@ -97,3 +109,24 @@ p_num_up.addEventListener("click", () => {
     p_total_price = p_price * p_item_num
     p_total.innerHTML = `${p_total_price.toLocaleString('ko-KR')}원`
 }) */
+
+// sec03 아코디언
+const sec03_h3 = document.querySelectorAll(".sec03_txt h3")
+const sec03_accordion = document.querySelectorAll(".sec03_accordion")
+const sec03_h3_arrow = document.querySelectorAll(".sec03_txt h3 span")
+console.log(sec03_h3_arrow)
+
+for(var i of sec03_accordion) {i.style.display = "block"}
+
+sec03_h3.forEach((i, j) => {
+    i.addEventListener("click", () => {
+        const isOpen = sec03_accordion[j].style.display == "block";
+        if (isOpen) {
+            sec03_accordion[j].style.display = "none";
+            sec03_h3_arrow[j].style.backgroundImage = "url(./images/detail/ico_toggle_arow_down.png)";
+        } else {
+            sec03_accordion[j].style.display = "block";
+            sec03_h3_arrow[j].style.backgroundImage = "url(./images/detail/ico_toggle_arow_up.png)";
+        }
+    })
+})
