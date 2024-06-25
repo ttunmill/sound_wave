@@ -18,20 +18,20 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 /* ============ 상세정보/쇼핑가이드 라인 */
-.menu_btn {
+.menu_btn_a {
     display: flex;
     justify-content: center;
     padding-top: 20px;
     border-bottom: 1px solid #ddd;
 }
-.menu_btn a {
+.menu_btn_a a {
     display: block;
     text-align: center;
     font-size: 0.875rem;
     color: #999;
     padding: 10px 0;
 }
-.menu_btn span {
+.menu_btn_a span {
     display: inline-block;
     width: 1px;
     height: 15px;
@@ -39,7 +39,7 @@ input[type='number'] {
     margin: 0 1rem;
     align-self: center;
 }
-.menu_btn:first-of-type a.active {
+.menu_btn_a:first-of-type a.active {
     font-weight: 500;
     color: #000;
     border-bottom: 1px solid #333;

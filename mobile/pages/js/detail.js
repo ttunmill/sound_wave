@@ -1,5 +1,5 @@
 // 상세정보/쇼핑가이드 버튼
-const detail_tap = document.querySelectorAll(".menu_btn a")
+const detail_tap = document.querySelectorAll(".menu_btn_a a")
 const sec02 = document.querySelector(".sec02")
 const sec03 = document.querySelector(".sec03")
 
