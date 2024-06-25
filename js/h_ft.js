@@ -49,14 +49,17 @@ const search_a = document.querySelector(".search_a")
 const search_form = document.querySelector("#searchBarForm")
 
 let search_flag = false;
+search_form.style.visibility = "hidden"
 let search_img = search_a.children[0].src
 search_a.addEventListener("click", (e) => {
     search_flag = !search_flag
     e.preventDefault();
     if(search_flag == true) {
+        search_form.style.visibility = "visible"
         search_form.style.opacity = "1"
         search_a.children[0].src = "./images/close.png" 
     } else {
+        search_form.style.visibility = "hidden"
         search_form.style.opacity = "0"
         search_a.children[0].src = "./images/search_ico.png" 
     }
