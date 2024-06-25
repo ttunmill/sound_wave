@@ -54,24 +54,26 @@ main h1 {
     align-items: center;
     gap: 0.3rem;
     margin-top: 20px;
+}
+#user_login_form .user_insert span button {
     font-size: 0.875rem;
     color: #757575;
+    background-color: unset;
+    border: 0;
 }
-#user_login_form .user_insert span input {display: none;}
 #user_login_form .user_insert span img {
     display: inline-block;
     width: 18px;
     height: 18px;
+    background-image: url("../images/login/bg_checkbox_checked.png");
 }
-
-
-
+/* #user_login_form .user_insert span input {display: none;} */
 /* ============ 로그인 버튼들 */
 #user_login_form .user_input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 20px;
 }
 #user_login_form .user_input button[type = submit], 
@@ -120,7 +122,8 @@ main h1 {
 #user_login_form .user_search_info {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    margin: 10px 0 20px;
+    padding-top: 10px;
     width: 100%;
     border-top: 1px solid #d5d5d5;
 }

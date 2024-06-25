@@ -26,12 +26,21 @@ let img_scr = "./images/login/bg_checkbox_checked.png"
 let img_original = "./images/login/bg_checkbox.png"
 
 let chk_flag = false;
+
 check_box.addEventListener("click", () => {
-    // let chk_message = confirm("로그인 상태를 유지하시겠습니까? 타인이 개인정보를 도용할 수 있으니, 주의하시기 바랍니다.")
     chk_flag = !chk_flag
     if(chk_flag == true) {
-        check_img.src = img_scr
+        let chk_message = confirm("로그인 상태를 유지하시겠습니까?\n타인이 개인정보를 도용할 수 있으니,\n주의하시기 바랍니다.")
+
+        if(chk_message == true) {
+            chk_flag = true;
+            check_img.src = img_scr;
+        } else {
+            chk_flag = false;
+            check_img.src = img_original;
+        }
     } else {
-        check_img.src = img_original
+        chk_flag = false;
+        check_img.src = img_original;
     }
 })
