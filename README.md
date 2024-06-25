@@ -6,9 +6,10 @@
 * (pc) http://ttunmill.dothome.co.kr/sound_wave/index.html
 * (sp) http://ttunmill.dothome.co.kr/sound_wave/mobile/index.html
 ---
-## 서브페이지 (2개)
+## 서브페이지 (3개)
 * 로그인
 * NEW 상품페이지
+* 상품 detail 페이지
 ---
 ### 작업이력
 * 6/19 메인페이지 **pc화면** 작업 시작
