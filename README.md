@@ -2,7 +2,6 @@
 ## 넷리파이 주소
 * https://soundwave-pf.netlify.app/
 * https://soundwave-pf.netlify.app/mobile/
----
 ## FTP 주소
 * http://ttunmill.dothome.co.kr/sound_wave/index.html
 * http://ttunmill.dothome.co.kr/sound_wave/mobile/index.html
