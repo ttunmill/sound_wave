@@ -1,3 +1,12 @@
+// 상세정보/쇼핑가이드 버튼
+const menu_btn = document.querySelectorAll(".menu_btn a")
+menu_btn.forEach((i, j) => {
+    i.addEventListener("click", (e) => {
+        e.preventDefault();
+    })
+})
+
+
 // 오른쪽 fixed 박스
 const fixed_box = document.querySelector(".fixed_box")
 const fixed_box_buy = document.querySelector(".fixed_box a")
@@ -13,7 +22,7 @@ window.addEventListener("scroll", () => {
 })
 
 // fixed 박스 buy now를 눌렀을 때
-const popup_wrap = document.querySelector(".popup_wrap")
+/* const popup_wrap = document.querySelector(".popup_wrap")
 const popup_close = document.querySelector(".popup_wrap .popup .close_btn")
 
 fixed_box_buy.addEventListener("click", (e) => {
@@ -26,7 +35,7 @@ popup_close.addEventListener("click", (e) => {
     e.preventDefault();
     popup_wrap.style.opacity = 0
     popup_wrap.style.visibility = "hidden"
-})
+}) */
 
 // 구매 금액
 const num_down = document.querySelector(".num_down")
@@ -60,7 +69,7 @@ num_up.addEventListener("click", () => {
 
 
 // 팝업 구매 금액
-const p_num_down = document.querySelectorAll(".num_down")[1]
+/* const p_num_down = document.querySelectorAll(".num_down")[1]
 const p_num_up = document.querySelectorAll(".num_up")[1]
 const p_total = document.querySelectorAll(".total_result .result .total")[1]
 const p_count = document.querySelectorAll(".total_result .result .count")[1]
@@ -87,4 +96,4 @@ p_num_up.addEventListener("click", () => {
     p_num_value.value = p_item_num
     p_total_price = p_price * p_item_num
     p_total.innerHTML = `${p_total_price.toLocaleString('ko-KR')}원`
-})
+}) */
