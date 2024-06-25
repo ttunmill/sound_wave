@@ -48,7 +48,7 @@
                 <ul class="sub non_sub"></ul>
             </li>
             <li>
-                <a href="./new.html">CS CENTER</a>
+                <a href="./login.html">CS CENTER</a>
                 <ul class="sub">
                     <li><a href="./login.html">1:1 문의</a></li>
                     <li><a href="./login.html">FAQ</a></li>
