@@ -1,4 +1,6 @@
-# sound_wave()
+# sound_wave
+* (24.06.19 ~ 24.06.26)
+* 총작업기간 7일(56시간)
 ## 넷리파이 주소
 * (pc) https://soundwave-pf.netlify.app/
 * (sp) https://soundwave-pf.netlify.app/mobile/
