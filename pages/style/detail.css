@@ -365,6 +365,7 @@ input[type='number'] {
     background-color: rgba(0, 0, 0, 0.7);
     visibility:hidden;
     opacity: 0;
+    z-index: 999;
     transition: all 0.3s;
 }
 .popup_wrap .popup {
