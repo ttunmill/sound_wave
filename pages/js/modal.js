@@ -4,7 +4,7 @@ const modal_close = document.querySelector(".modal_header button");
 const modal_image = document.querySelector("#user_product_form .top_tbl .image")
 const modal_name = document.querySelector(".modal_body .product_name")
 
-modal.style.display = "none"
+// modal.style.display = "none"
 let item_img = ""
 let item_name = ""
 add_cart_btn.forEach((i, j) => {

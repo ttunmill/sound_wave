@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+body {min-width: 346px;}
 section {padding: 50px 16px;}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -209,7 +210,7 @@ input[type='number'] {
     justify-content: center;
     align-items: center;
     padding: 15px 0;
-    width: calc(100% - 270px);
+    width: calc((100% / 2) - 1rem);
     min-width: 108px;
     border-radius: 5px;
     font-size: 1rem;
