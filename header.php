@@ -85,7 +85,7 @@
                     </form>
                 </li>
                 <li><a href="#"><img src="../images/cart_ico.png" alt="장바구니"></a></li>
-                <li><a href="#"><img src="../images/user_ico.png" alt="내 정보"></a></li>
+                <li><a href="./login.html"><img src="../images/user_ico.png" alt="내 정보"></a></li>
             </ul>
         </div>
     </div>
