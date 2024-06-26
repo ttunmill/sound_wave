@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - 사운드웨이브</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../style/reset.css">
+    <link rel="stylesheet" href="../style/m-h_ft.css">
+    <link rel="shortcut icon" href="../../images/favicon-20db9be823a43d572692e04e2cccff9f.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/join.css">
+    <!-- js -->
+    <script src="../../lib/jquery-3.7.1.min.js" defer></script>
+    <script src="./js/m_page-h.ft.js" defer></script>
+    <script src="./js/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <?
+        include("../header.php");
+        ?>
+    </header>
+    <main>
+        <form method="post">
+            <section class="sec01">
+                <h1>회원가입</h1>
+                <h2>회원인증<span><em>*</em> 필수</span></h2>
+                <div id="sign_up_type">
+                    <div class="input_g">
+                        <input type="radio" id="individual_cert" checked>
+                        <label for="individual_cert">개인회원</label>
+                    </div>
+                    <div class="input_g">
+                        <input type="radio" id="email_cert" checked>
+                        <label for="email_cert">이메일인증</label>
+                    </div>      
+                </div>
+                <div class="txt">
+                    <p>기본정보 > 이메일 항목에 입력하신 정보로 본인인증을 진행합니다.</p>
+                    <p>회원가입 후에 입력하신 이메일 주소로 인증 메일이 발송되오니, 확인해 주시기 바랍니다.</p>
+                </div>
+            </section>
+            <section class="sec02">
+                <h2>기본정보<span><em>*</em> 필수</span></h2>
+                <div id="user_info_form">
+                    <dl>
+                        <dt>아이디 <em>*</em></dt>
+                        <dd class="insert_id">
+                            <div class="input_g">
+                                <input type="text">
+                                <button type="button">중복확인</button>
+                            </div>
+                            <p></p>
+                        </dd>
+                        <dt>비밀번호 <em>*</em></dt>
+                        <dd>
+                            <div class="input_g">
+                                <input type="password">
+                                <span>- (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span>
+                            </div>
+                            <p></p>
+                        </dd>
+                        <dt>비밀번호 확인 <em>*</em></dt>
+                        <dd>
+                            <input type="password">
+                            <span></span>
+                        </dd>
+                        <dt>이름 <em>*</em></dt>
+                        <dd>
+                            <input type="text">
+                        </dd>
+                        <dt class="address">주소 <em>*</em></dt>
+                        <dd class="address">
+                            <div class="input_g">
+                                <input type="text">
+                                <button type="button">우편번호</button>
+                            </div>
+                            <div class="input_g">
+                                <input type="text">
+                            </div>
+                            <div class="input_g">
+                                <input type="text">
+                            </div>
+                            <p>- 나머지 주소는 선택입력이 가능합니다.</p>
+                        </dd>
+                        <dt class="phone1">일반전화 <em>*</em></dt>
+                        <dd class="phone1">
+                            <select name="phone1" id="phone1">
+                                <option value="02">02</option>
+                                <option value="031">031</option>
+                                <option value="032">032</option>
+                                <option value="033">033</option>
+                                <option value="041">041</option>
+                                <option value="042">042</option>
+                                <option value="043">043</option>
+                                <option value="044">044</option>
+                                <option value="051">051</option>
+                                <option value="052">052</option>
+                                <option value="053">053</option>
+                                <option value="054">054</option>
+                                <option value="055">055</option>
+                                <option value="061">061</option>
+                                <option value="062">062</option>
+                                <option value="063">063</option>
+                                <option value="064">064</option>
+                                <option value="0502">0502</option>
+                                <option value="0503">0503</option>
+                                <option value="0504">0504</option>
+                                <option value="0505">0505</option>
+                                <option value="0506">0506</option>
+                                <option value="0507">0507</option>
+                                <option value="070">070</option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                                <option value="0508">0508</option>
+                            </select>
+                            -
+                            <input type="text" maxlength="4">
+                            -
+                            <input type="text" maxlength="4">
+                        </dd>
+                        <dt class="phone2">휴대전화 <em>*</em></dt>
+                        <dd class="phone2">
+                            <select name="phone12" id="phone2">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                            -
+                            <input type="text" maxlength="4">
+                            -
+                            <input type="text" maxlength="4"> 
+                        </dd>
+                        <dt>이메일 <em>*</em></dt>
+                        <dd>
+                            <div class="input_g">
+                                <input type="email">
+                                <button type="button">중복확인</button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="sec03">
+                <div id="additional_info">
+                    <h2>추가정보</h2>
+                    <dl>
+                        <dt>성별</dt>
+                        <dd>
+                            <input type="radio" name="gender" id="maie">
+                            <label for="maie">남자</label>
+                            <input type="radio" name="gender" id="femaie">
+                            <label for="femaie">여자</label>
+                        </dd>
+                        <dt class="birthday">생년월일 <em>*</em></dt>
+                        <dd class="birthday">
+                            <div class="input_g">
+                                <input type="radio" name="birthday" id="solar" checked>
+                                <label for="solar">양력</label>
+                                <input type="radio" name="birthday" id="Lunar">
+                                <label for="Lunar">음력</label>
+                            </div>
+                            <div class="input_g">
+                                <input type="text"> 년
+                                <input type="text"> 월
+                                <input type="text"> 일
+                            </div>
+                        </dd>
+                        
+                    </dl>
+                </div>
+            </section>
+            <section class="sec04">
+                <h2>환불계좌</h2>
+                <dl>
+                    <dt>예금주 <em>*</em></dt>
+                    <dd>
+                        <input type="text">
+                    </dd>
+                    <dt>은행명 <em>*</em></dt>
+                    <dd>
+                        <select name="bank" id="bank">
+                            <option value="0">- 은행선택 -</option>
+                            <option value="1">기업은행</option>
+                            <option value="2">국민은행</option>
+                            <option value="3">농협</option>
+                            <option value="4">우리은행</option>
+                        </select>
+                    </dd>
+                    <dt>계좌번호 <em>*</em></dt>
+                    <dd>
+                        <input type="text">
+                    </dd>
+                </dl>
+                <div class="submit_btn">
+                    <button type="submit">회원가입</button>
+                </div>
+            </section>
+        </form>
+    </main>
+    <div class="footer">
+        <?
+        include("../footer.php");
+        ?>
+    </div>
+</body>
+</html>

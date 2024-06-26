@@ -1,6 +1,230 @@
+/* ============ 공통 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 * {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: normal;
     font-style: normal;
+}
+body {min-width: 1480px;}
+main {width: 1350px; margin: 0 auto;}
+section {padding: 50px 0;}
+section h2 {
+    margin-bottom: 30px;
+    font-size: 1.313rem;
+    font-weight: 700;
+}
+* dl dt,
+* dl dd {
+    font-size: 0.875rem;
+    color: #353535;
+}
+* dl dd input {outline: unset;}
+* dl dd input + span {
+    font-size: 0.875rem;
+    color: #353535;
+}
+* dl dd input[type = text],
+* dl dd input[type = password],
+* dl dd input[type = email] {
+    width: 196px;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+}
+/* ============ 회원가입 */
+/* ================ sec01 / 회원구분/회원인증 */
+.sec01 h1 {
+    margin-bottom: 50px;
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+.sec01 #sign_up_type {border-top: 3px solid #000;}
+.sec01 #sign_up_type dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec01 #sign_up_type dl dt,
+.sec01 #sign_up_type dl dd {
+    padding: 20px 0;
+    line-height: 1.3;
+    border-bottom: 1px solid #a5a6a7;
+}
+.sec01 #sign_up_type dl dt {width: 150px;}
+.sec01 #sign_up_type dl dd {width: calc(100% - 150px);}
+.sec01 #sign_up_type dl dd > * {line-height: 1.3;}
+/* ================ sec02 / 기본정보 */
+.sec02 h2 {
+    display: flex;
+    justify-content: space-between;
+}
+.sec02 h2 span {font-size: 0.875rem;}
+.sec02 h2 span em {
+    vertical-align: middle;
+    color: #50bcdf; 
+    font-weight: 500;
+}
+.sec02 #user_info_form dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec02 #user_info_form dl dt,
+.sec02 #user_info_form dl dd {
+    padding: 20px 0;
+    line-height: 1.3;
+    border-bottom: 1px solid #a5a6a7;
+}
+.sec02 #user_info_form dl dt {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+.sec02 #user_info_form dl dd {width: calc(100% - 150px);}
+.sec02 #user_info_form dl dd > * {line-height: 1.3;}
+.sec02 #user_info_form dl dt.address {align-items: flex-start;}
+.sec02 #user_info_form dl dd.address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.sec02 #user_info_form dl dd.address .input_g:first-child {}
+.sec02 #user_info_form dl dd.address .input_g:first-child input {width: 60px;}
+.sec02 #user_info_form dl dd.address .input_g:first-child input + button {
+    padding: 8px 8px;
+    border: 1px solid #d1d1d1;
+    color: #222;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.sec02 #user_info_form dl dd.address .input_g:first-child input + button:hover {background-color: #f3f3f3;}
+.sec02 #user_info_form dl dd.phone1 select,
+.sec02 #user_info_form dl dd.phone1 input,
+.sec02 #user_info_form dl dd.phone2 select,
+.sec02 #user_info_form dl dd.phone2 input {
+    width: 60px;
+    padding: 7px;
+    border: 1px solid #d5d5d5;
+    color: #353535;
+}
+.sec02 #user_info_form dl dd.phone1 select,
+.sec02 #user_info_form dl dd.phone2 select {padding: 5px 0;}
+/* ================ sec03 / 추가정보 */
+.sec03 #additional_info dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec03 #additional_info dl dt,
+.sec03 #additional_info dl dd {
+    padding: 20px 0;
+    line-height: 1.3;
+    border-bottom: 1px solid #a5a6a7;
+}
+.sec03 #additional_info dl dt {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+.sec03 #additional_info dl dd {width: calc(100% - 150px);}
+.sec03 #additional_info dl dd > * {line-height: 1.3;}
+.sec03 #additional_info dl dd.birthday {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.sec03 #additional_info dl dd.birthday .input_g input[type = text] {width: 60px;}
+.sec03 #additional_info dl dt.refund {align-items: flex-start;}
+.sec03 #additional_info dl dd.refund {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.sec03 #additional_info dl dd.refund span {
+    display: inline-block;
+    width: 100px;
+}
+.sec03 #additional_info dl dd.refund .input_g span::before {
+    content: '\00B7';
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.sec03 #additional_info dl dd.refund .input_g select {
+    width: 196px;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+    color: #353535;
+}
+/* ================ sec04 / 전체 동의 */
+.sec04 {}
+.sec04 > .input_g {margin-bottom: 20px;}
+.sec04 > .input_g input {display: none;}
+.sec04 > .input_g label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #353535;
+    font-weight: 500;
+}
+.sec04 > .input_g label::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/join/bg_join_check.png");
+    background-size: cover;
+    background-position: left;
+}
+.sec04 > .input_g input:checked + label::before {background-position: right;}
+.sec04 .agree_area {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #d7d5d5;
+    background-color: #fbfafa;
+}
+.sec04 .agree_area h3 {
+    margin-bottom: 20px;
+    font-size: 0.938rem;
+    color: #777;
+}
+.sec04 .agree_area .content {
+    padding: 20px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    overflow-y: auto;
+}
+.sec04 .agree_area .content .text_line > * {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #777;
+}
+.content .text_line .txt p {
+    padding-bottom: 20px;
+}
+.sec04 .agree_area .content .text_line strong {font-weight: 500;}
+.sec04 .agree_area .agree_area_btm {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.938rem;
+    color: #777;
+}
+.sec04 .agree_area .agree_area_btm {}
+.sec04 .agree_area .agree_area_btm {}
+/* ================ 회원가입 버튼 */
+.submit_btn {text-align: center;}
+.submit_btn button[type = submit] {
+    display: inline-block;
+    padding: 15px;
+    width: 210px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.submit_btn button[type = submit]:hover {
+    color: #000;
+    background-color: #fff;
 }

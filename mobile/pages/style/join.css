@@ -1,0 +1,272 @@
+/* ============ 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+body {min-width: 380px;}
+section {padding: 20px 16px;}
+section h2 {
+    margin-bottom: 30px;
+    font-size: 1.313rem;
+    font-weight: 700;
+}
+* dl dt,
+* dl dd {
+    font-size: 0.875rem;
+    color: #353535;
+}
+* dl dt em {
+    vertical-align: middle;
+    color: #fb6544;
+    font-weight: 500;
+}
+/* * dl dd span em {
+    vertical-align: middle;
+    color: #fb6544;
+    font-weight: 500;
+} */
+* dl dd input {outline: unset;}
+* dl dd input + span {
+    font-size: 0.875rem;
+    color: #353535;
+}
+* dl dd input[type = text],
+* dl dd input[type = password],
+* dl dd input[type = email] {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+section h2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4a5164;
+    background: #f1f1f1;
+    border: 1px solid #d5d5d5;
+}
+section h2 span {font-size: 0.875rem;}
+section h2 span em {
+    vertical-align: middle;
+    color: #fb6544;
+    font-weight: 500;
+}
+/* ============ 회원가입 */
+/* ================ sec01 / 회원구분/회원인증 */
+.sec01 h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.sec01 *:not(h1) {font-size: 0.813rem;}
+.sec01 .input_g {margin-bottom: 20px;}
+.sec01 input[type = radio] {display: none;}
+.sec01 label {
+    display: flex; gap: 0.5rem;
+    color: #353535;
+}
+.sec01 label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/join/bg_radio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sec01 input[type = radio]:checked + label::before {background-image: url("../images/join/bg_radio_checked.png");}
+.sec01 .txt p{
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: #353535;
+}
+.sec01 #sign_up_type dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec01 #sign_up_type dl dt,
+.sec01 #sign_up_type dl dd {
+    padding: 20px 0;
+    line-height: 1.3;
+    border-bottom: 1px solid #a5a6a7;
+}
+.sec01 #sign_up_type dl dt {width: 150px;}
+.sec01 #sign_up_type dl dd {width: calc(100% - 150px);}
+.sec01 #sign_up_type dl dd > * {line-height: 1.3;}
+/* ================ sec02 / 기본정보 */
+.sec02 *:not(h2) {font-size: 0.813rem;}
+.sec02 #user_info_form dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec02 #user_info_form dl dt,
+.sec02 #user_info_form dl dd {
+    padding: 10px 0;
+    line-height: 1.3;
+    
+}
+.sec02 #user_info_form dl dt {
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+.sec02 #user_info_form dl dd {width: calc(100% - 100px);}
+.sec02 #user_info_form dl dd > * {line-height: 1.3;}
+.sec02 #user_info_form dl dd.insert_id {}
+.sec02 #user_info_form dl dd.insert_id .input_g input {width: calc(100% - 70px);}
+.sec02 #user_info_form dl dd.insert_id .input_g input + button {
+    padding: 8px 8px;
+    border: 1px solid #d1d1d1;
+    color: #222;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.sec02 #user_info_form dl dd:last-of-type .input_g input {width: calc(100% - 70px);}
+.sec02 #user_info_form dl dd:last-of-type .input_g input + button {
+    padding: 8px 8px;
+    border: 1px solid #d1d1d1;
+    color: #222;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.sec02 #user_info_form dl dd.insert_id + dt {align-items: flex-start;}
+.sec02 #user_info_form dl dd.insert_id + dt + dd input[type = password] {
+    margin-bottom: 10px;
+}
+.sec02 #user_info_form dl dt.address {align-items: flex-start;}
+.sec02 #user_info_form dl dd.address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.sec02 #user_info_form dl dd.address .input_g:first-child {}
+.sec02 #user_info_form dl dd.address .input_g:first-child input {width: 60px;}
+.sec02 #user_info_form dl dd.address .input_g:first-child input + button {
+    padding: 8px 8px;
+    border: 1px solid #d1d1d1;
+    color: #222;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.sec02 #user_info_form dl dd.address .input_g:first-child input + button:hover {background-color: #f3f3f3;}
+.sec02 #user_info_form dl dd.phone1 select,
+.sec02 #user_info_form dl dd.phone1 input,
+.sec02 #user_info_form dl dd.phone2 select,
+.sec02 #user_info_form dl dd.phone2 input {
+    width: 31%;
+    padding: 7px;
+    border: 1px solid #d5d5d5;
+    color: #353535;
+}
+.sec02 #user_info_form dl dd.phone1,
+.sec02 #user_info_form dl dd.phone2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec02 #user_info_form dl dd.phone1 select,
+.sec02 #user_info_form dl dd.phone2 select {padding: 5px 0;}
+/* ================ sec03 / 추가정보 */
+.sec03 #additional_info dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec03 #additional_info dl dt,
+.sec03 #additional_info dl dd {
+    padding: 10px 0;
+    line-height: 1.3;
+}
+.sec03 #additional_info dl dt {
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+.sec03 #additional_info dl dt.birthday {align-items: flex-start;}
+.sec03 #additional_info dl dd {
+    display: flex;
+    width: calc(100% - 100px);
+}
+.sec03 #additional_info dl dd > * {line-height: 1.3;}
+.sec03 #additional_info dl dd.birthday {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sec03 #additional_info dl dd.birthday .input_g input[type = text] {width: 60px;}
+.sec03 #additional_info dl dd input[type = radio] {display: none;}
+.sec03 #additional_info dl dd label {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-right: 10px;
+}
+.sec03 #additional_info dl dd .input_g {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.sec03 #additional_info dl dd label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/join/bg_radio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sec03 #additional_info dl dd input[type = radio]:checked + label::before {background-image: url("../images/join/bg_radio_checked.png");}
+/* ================ sec04 / 전체 동의 */
+.sec04 {}
+.sec04 dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec04 dl dt,
+.sec04 dl dd {
+    padding: 10px 0;
+    line-height: 1.3;
+}
+.sec04 dl dt {
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+.sec04 dl dt.birthday {align-items: flex-start;}
+.sec04 dl dd {
+    display: flex;
+    width: calc(100% - 100px);
+}
+.sec04 dl dd > * {line-height: 1.3;}
+.sec04 dl dd select {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+    color: #353535;
+    border-radius: 5px;
+}
+/* ================ 회원가입 버튼 */
+.submit_btn {
+    margin-top: 30px;
+    text-align: center;
+}
+.submit_btn button[type = submit] {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #222;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
