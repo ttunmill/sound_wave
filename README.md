@@ -13,17 +13,21 @@
 ---
 
 ## 넷리파이 주소
-* (pc) https://soundwave-pf.netlify.app/
-* (sp) https://soundwave-pf.netlify.app/mobile/
+* [`메인페이지 PC`](https://soundwave-pf.netlify.app/)
+* [`메인페이지 SP`](https://soundwave-pf.netlify.app/mobile/)
 ## FTP 주소
-* (pc) http://ttunmill.dothome.co.kr/sound_wave/index.html
-* (sp) http://ttunmill.dothome.co.kr/sound_wave/mobile/index.html
+* [`메인페이지 PC`](http://ttunmill.dothome.co.kr/sound_wave/index.html)
+* [`메인페이지 SP`](http://ttunmill.dothome.co.kr/sound_wave/mobile/index.html)
 ---
 ## 🔗서브페이지 (4개)
-* 로그인페이지 (login.html)
-* 회원가입페이지 (join.html)
-* NEW 상품페이지 (new.html)
-* 상품 상세페이지 (detail.html)
+* [`로그인페이지 PC (login.html)`](http://ttunmill.dothome.co.kr/sound_wave/pages/login.html)
+* [`로그인페이지 SP (login.html)`](http://ttunmill.dothome.co.kr/sound_wave/mobile/pages/login.html)
+* [`회원가입페이지 PC (join.html)`](http://ttunmill.dothome.co.kr/sound_wave/pages/join.html)
+* [`회원가입페이지 SP (join.html)`](http://ttunmill.dothome.co.kr/sound_wave/mobile/pages/join.html)
+* [`NEW 상품페이지 PC (new.html)`](http://ttunmill.dothome.co.kr/sound_wave/pages/new.html)
+* [`NEW 상품페이지 SP (new.html)`](http://ttunmill.dothome.co.kr/sound_wave/mobile/pages/new.html)
+* [`상품 상세페이지 PC (detail.html)`](http://ttunmill.dothome.co.kr/sound_wave/pages/detail.html)
+* [`상품 상세페이지 SP (detail.html)`](http://ttunmill.dothome.co.kr/sound_wave/mobile/pages/detail.html)
 ---
 ### ⏱작업이력
 1. (24.6.19) 메인페이지 **pc화면** 작업 시작
