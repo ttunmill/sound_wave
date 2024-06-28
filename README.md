@@ -1,4 +1,6 @@
 # sound_wave (적응형)
+<img src="https://github.com/ttunmill/sound_wave/assets/84768554/0e3c2d3e-4558-42ef-a6ab-c1e927a7da82">
+
 * (24.06.19 ~ 24.06.26)
 * 총작업기간 7일(56시간)
 ## 사용 tool
