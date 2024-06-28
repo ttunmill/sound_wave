@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.25
+*/
 // 오른쪽 fixed 박스
 const fixed_box = document.querySelector(".fixed_box")
 const fixed_box_buy = document.querySelector(".fixed_box a")

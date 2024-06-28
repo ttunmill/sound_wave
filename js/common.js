@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.21
+*/
 const swiper1 = new Swiper(".main_swiper", {
     autoplay : {delay : 5000},
     loop : true,

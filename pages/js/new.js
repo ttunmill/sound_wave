@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.24
+*/
 // img 호버시 이벤트
 const hover_txt = document.querySelectorAll(".hover_txt")
 const item_title = document.querySelectorAll(".img_g + h3")

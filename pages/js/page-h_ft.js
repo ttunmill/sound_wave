@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.21
+*/
 // 네비게이션
 const nav_btm = document.querySelector(".nav_btm")
 const gnb = document.querySelector(".gnb")

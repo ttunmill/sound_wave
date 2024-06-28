@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.21
+*/
 // sec03 이벤트 버튼
 const sec03_btn = document.querySelectorAll(".event_btn a")
 const sec03_ul = document.querySelectorAll(".sec03 > .all_list")

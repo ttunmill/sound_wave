@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.21
+*/
 const modal = document.querySelector(".cart_bg");
 const add_cart_btn = document.querySelectorAll(".sec01_g > .img_g .img_txt > button");
 const modal_close = document.querySelector(".modal_header button");

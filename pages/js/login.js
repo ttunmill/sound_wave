@@ -1,3 +1,7 @@
+/* 
+    제작 : 조현우
+    갱신일 : 2024.06.24
+*/
 const member_btn = document.querySelectorAll(".select_login a")
 const login_frm = document.querySelector("#user_login_form")
 const non_login_frm = document.querySelector("#non_user_form")
