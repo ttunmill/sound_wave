@@ -66,7 +66,8 @@
       document.location.replace("./mobile/index.html");
   }
 ```
-- 위 코드를 사용하여 디바이스 크기를 인식하고 PC에 접속하였지만 디바이스 크기에 맞춰 테블릿~모바일 기기는 SP모드 페이지로 이동하도록 설정
+- 위 코드를 사용하여 디바이스 크기를 인식하도록 설정
+- 모바일로 PC사이트를 접속한다면 위 script로 디바이스 크기가 테블릿 또는 모바일일 경우 location.replace로 모바일 사이트로 이동시킴
 
 ```
   const modal = document.querySelector(".cart_bg");
