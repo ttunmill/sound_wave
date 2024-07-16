@@ -56,3 +56,40 @@
 * pc화면과 sp화면 디자인이 다름
 
   └ pc와 sp화면을 번갈아가며 계속 보며 디자인이 다른점을 찾으며 페이지를 제작하였음
+---
+### script
+```
+  // PC웹페이지에 적용할부분
+  var ua = window.navigator.userAgent.toLowerCase();
+  var mobileWindowWidth
+  if(/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /windows ce/.test(ua)) {
+      document.location.replace("./mobile/index.html");
+  }
+```
+- 위 코드를 사용하여 디바이스 크기를 인식하고 PC에 접속하였지만 디바이스 크기에 맞춰 테블릿~모바일 기기는 SP모드 페이지로 이동하도록 설정
+
+```
+  const modal = document.querySelector(".cart_bg");
+  const add_cart_btn = document.querySelectorAll(".sec01_g > .img_g .img_txt > button");
+  const modal_close = document.querySelector(".modal_header button");
+  const modal_image = document.querySelector("#user_product_form .top_tbl .image")
+  const modal_name = document.querySelector(".modal_body .product_name")
+  
+  let item_img = ""
+  let item_name = ""
+  add_cart_btn.forEach((i, j) => {
+      i.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.style.display = "block"
+          item_name = item_title[j].innerText
+          modal_name.innerText = item_name
+          item_img = img_g[j].children[0].src
+          modal_image.children[0].src = item_img;
+      })
+  })
+  
+  modal_close.addEventListener("click", () => {
+      modal.style.display = "none"
+  })
+```
+- 이미지 src & 제목을 가져와 모달창에도 적용시킴
