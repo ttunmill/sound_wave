@@ -57,7 +57,7 @@
 
   └ pc와 sp화면을 번갈아가며 계속 보며 디자인이 다른점을 찾으며 페이지를 제작하였음
 ---
-### script
+### 👁‍🗨SCRIPT
 ```
   // PC웹페이지에 적용할부분
   var ua = window.navigator.userAgent.toLowerCase();
