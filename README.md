@@ -34,7 +34,7 @@
 * [`상품 상세페이지 PC (detail.html)`](http://ttunmill.dothome.co.kr/sound_wave/pages/detail.html)
 * [`상품 상세페이지 SP (detail.html)`](http://ttunmill.dothome.co.kr/sound_wave/mobile/pages/detail.html)
 ---
-### ⏱작업이력
+## ⏱작업이력
 1. (24.6.19) 메인페이지 **pc화면** 작업 시작
 2. (24.6.21) 메인페이지 **pc화면** 제작 완료(html, css, javascript)
 3. (24.6.21) 메인페이지 **sp화면** 작업 시작
@@ -46,7 +46,7 @@
 9. (24.6.26) 회원가입 페이지 제작시작
 10. (24.6.26) 회원가입 페이지 제작완료 (pc, sp)
 ---
-### 🗯작업고충
+## 🗯작업고충
 * swiper 플러그인을 많이 사용해보지 않아 여러개의 swiper를 사용하기 어려웠음
 
   └ swiper공식 사이트에 들어가서 가이드라인 확인 및 다른 사용자들 사용법 확인
@@ -57,7 +57,8 @@
 
   └ pc와 sp화면을 번갈아가며 계속 보며 디자인이 다른점을 찾으며 페이지를 제작하였음
 ---
-### 👁‍🗨SCRIPT
+## 👁‍🗨SCRIPT
+### code1
 ```
   // PC웹페이지에 적용할부분
   var ua = window.navigator.userAgent.toLowerCase();
@@ -68,7 +69,7 @@
 ```
 - 위 코드를 사용하여 디바이스 크기를 인식하도록 설정
 - 모바일로 PC사이트를 접속한다면 위 script로 디바이스 크기가 테블릿 또는 모바일일 경우 location.replace로 모바일 사이트로 이동시킴
-
+### code2
 ```
   const modal = document.querySelector(".cart_bg");
   const add_cart_btn = document.querySelectorAll(".sec01_g > .img_g .img_txt > button");
@@ -95,6 +96,7 @@
 ```
 - 상품 제목과 이미지 - 모달창으로 연계
 - 상품 modal_image와 modal_name을 불러와 모달창에서도 사용자가 선택하였던 상품/제목을 볼 수 있게 하였음
+### code3
 ```
 const check_box = document.querySelector("#user_login_form .user_insert span")
 const check_img = document.querySelector("#user_login_form .user_insert img")
