@@ -95,3 +95,34 @@
 ```
 - 상품 제목과 이미지 - 모달창으로 연계
 - 상품 modal_image와 modal_name을 불러와 모달창에서도 사용자가 선택하였던 상품/제목을 볼 수 있게 하였음
+```
+const check_box = document.querySelector("#user_login_form .user_insert span")
+const check_img = document.querySelector("#user_login_form .user_insert img")
+console.log(check_box)
+
+let img_scr = "./images/login/bg_checkbox_checked.png"
+let img_original = "./images/login/bg_checkbox.png"
+
+let chk_flag = false;
+
+check_box.addEventListener("click", () => {
+    chk_flag = !chk_flag
+    if(chk_flag == true) {
+        let chk_message = confirm("로그인 상태를 유지하시겠습니까?\n타인이 개인정보를 도용할 수 있으니,\n주의하시기 바랍니다.")
+
+        if(chk_message == true) {
+            chk_flag = true;
+            check_img.src = img_scr;
+        } else {
+            chk_flag = false;
+            check_img.src = img_original;
+        }
+    } else {
+        chk_flag = false;
+        check_img.src = img_original;
+    }
+})
+```
+- **모바일 환경에서만 확인가능**
+- 체크해제 되어있을 때 "로그인 상태 유지" 버튼을 클릭 하였을 시 사용자한테 메세지를 출력함
+- 체크된 상태에서 클릭하였을 시 메세지 출력은 없고 비활성 상태로 롤백하게 만들었음
